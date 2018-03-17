@@ -9,10 +9,13 @@
 #include <sys/msg.h>
 #include <string.h>
 
+#define ELIMCOLA	system("ipcrm -Q 0x16096153")
+
 char fifo_name1[]="/tmp/fifo_monitor_1";
 char fifo_name2[]="/tmp/fifo_monitor_2";
 char ar[100]="0";
 char at[11]="0";
+char at1[6];//="0";
 
 typedef struct Mi_Tipo_Mensaje
 {
@@ -34,6 +37,7 @@ void ej2();
 void ej3();
 void ej4();
 void ej5();
+void ej6();
 
 void limpio()
 {
@@ -90,7 +94,7 @@ void ej2()
 	write(fd2,sec2,sizeof(sec2));
 
 	fd=open(fifo_name1,O_RDONLY);
-	n=read(fd,ar,sizeof(ar));
+	n=read(fd,ar,sizeof(ar));//n guarda el numero de bytes que lee, si es -1 error, 0 nada, 0< nºbytes
 	printf("El secreto 2 es: %s\n",ar);
 	write(fd2,ar,sizeof(ar));
 
@@ -119,7 +123,7 @@ void ej3()
 		printf("El secreto 4 es: %s\n",buff.texto);
 	}
 
-	sprintf(at,"<0%ld>%s",buff.tipo,buff.texto);
+	sprintf(at,"<%03ld>%s",buff.tipo,buff.texto);
 
 	env=msgctl(ide,IPC_RMID,(struct msqid_ds *)NULL);
 
@@ -154,7 +158,8 @@ void ej5()
 	iden=msgget(0x16096153L,0666);
 	printf("Identificador: %d\n",iden);
 	env=msgrcv(iden,&buff,sizeof(buff)-sizeof(long),tip,0);
-
+//El ultimo elemento si es cero bloquea el proceso hasta que se lea todo el tamaño establecido
+//Con un IPC_NOWAIT no se bloquea el proceso si no hay nada que leer
 	if(env==-1)
 		printf("Fallo al leer la cola\n");
 	else
@@ -162,8 +167,30 @@ void ej5()
 		printf("Pid cliente: %ld\n",buff.tipo);
 		printf("Secreto 6: %s\n",buff.texto);
 	}
-	env=msgctl(iden,IPC_RMID,(struct msqid_ds *)NULL);
-	error(env);
+	strcpy(at1,buff.texto);
+	//env=msgctl(iden,IPC_RMID,(struct msqid_ds *)NULL);
+	//error(env);
+}
+
+void ej6()
+{
+	int iden,jordi;
+	msgbuf buff;
+	char temp[6];
+
+	printf("Introduce el pid del monitor: ");
+	limpio();
+	fgets(temp,6,stdin);
+	sscanf(temp, "%ld", &buff.tipo);
+
+	jordi=atoi(at1+1);
+	printf("atoi: %d\n", jordi);
+	sprintf(buff.texto,"<%03d>",jordi);
+	printf("buffer: %s\n", buff.texto);
+
+	iden=msgget(0x16096153L,0666);
+	msgsnd(iden,(msgbuf *)&buff,sizeof(buff)-sizeof(long),0);
+
 }
 
 int main(int argc, char*argv[])
@@ -183,6 +210,9 @@ int main(int argc, char*argv[])
 
 	ej5();
 	intro();
-}
 
- 
+	ej6();
+	intro();
+
+	return 0;
+}
