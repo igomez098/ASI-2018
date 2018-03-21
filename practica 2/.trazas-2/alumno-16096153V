@@ -1,0 +1,2252 @@
+1521306954: Iniciando sesión el día 17  del mes 3 a las 18:15.
+1521306954: COMMAND <cp -f /tmp/.monitor ./monitor2>
+1521306954: COMMAND <find . -type f -newer .alumno -print | awk -v pwd="`pwd`/.trazas-2" '{ if(index($0,pwd) != 1) print }' > /tmp/.asitmp>
+1521306954: COMMAND <cp ./client.? .trazas-2>
+1521306954: COMMAND <tar zcf save_file-16096153V .trazas-2 > /dev/null>
+1521306954: COMMAND <echo "\nopen u017633.ehu.es\nuser anonymous anonymous\npassive\ncd LAB1718/practica-2\nput save_file-16096153V 16096153V-17-3-18h15\n" | 	  ftp -n 2>&1 > /dev/null>
+1521306964: 
+********************************************
+           INICIANDO SESION
+********************************************
+1521306964: COMMAND <ifconfig >> .trazas-2/alumno-16096153V>
+enp2s0    Link encap:Ethernet  direcciónHW 3c:4a:92:00:51:94  
+          ACTIVO DIFUSIÓN MULTICAST  MTU:1500  Métrica:1
+          Paquetes RX:0 errores:0 perdidos:0 overruns:0 frame:0
+          Paquetes TX:0 errores:0 perdidos:0 overruns:0 carrier:0
+          colisiones:0 long.colaTX:1000 
+          Bytes RX:0 (0.0 B)  TX bytes:0 (0.0 B)
+
+lo        Link encap:Bucle local  
+          Direc. inet:127.0.0.1  Másc:255.0.0.0
+          Dirección inet6: ::1/128 Alcance:Anfitrión
+          ACTIVO BUCLE FUNCIONANDO  MTU:65536  Métrica:1
+          Paquetes RX:6330 errores:0 perdidos:0 overruns:0 frame:0
+          Paquetes TX:6330 errores:0 perdidos:0 overruns:0 carrier:0
+          colisiones:0 long.colaTX:1 
+          Bytes RX:613134 (613.1 KB)  TX bytes:613134 (613.1 KB)
+
+wlp3s0b1  Link encap:Ethernet  direcciónHW c0:cb:38:4d:99:ab  
+          Direc. inet:192.168.1.40  Difus.:192.168.1.255  Másc:255.255.255.0
+          Dirección inet6: fe80::ddbd:2aba:98ba:1fd7/64 Alcance:Enlace
+          Dirección inet6: fe80::ecb0:27b9:dd13:d4eb/64 Alcance:Enlace
+          Dirección inet6: fe80::5c31:1c82:f87d:b2d3/64 Alcance:Enlace
+          ACTIVO DIFUSIÓN FUNCIONANDO MULTICAST  MTU:1500  Métrica:1
+          Paquetes RX:1087891 errores:0 perdidos:0 overruns:0 frame:0
+          Paquetes TX:770122 errores:0 perdidos:0 overruns:0 carrier:0
+          colisiones:0 long.colaTX:1000 
+          Bytes RX:1508829554 (1.5 GB)  TX bytes:76563408 (76.5 MB)
+
+1521306985: 
+
+
+*************************************************
+
+          EJECUTANDO EL EJERCICIO 1.
+
+*************************************************
+
+
+1521306985: COMMAND <rm -f /tmp/fifo_monitor_1>
+1521306985: COMMAND <ls -al /tmp/fifo_monitor_1 >> .trazas-2/alumno-16096153V 2>&1>
+ls: no se puede acceder a '/tmp/fifo_monitor_1': No existe el archivo o el directorio
+1521306985: 
+-------------------------------------------------------
+CREANDO FIFO </tmp/fifo_monitor_1> PARA ENVIAR MENSAJE
+-------------------------------------------------------
+1521306985: COMMAND <ls -al /tmp/fifo_monitor_1 >> .trazas-2/alumno-16096153V 2>&1>
+prw------- 1 iker iker 0 mar 17 18:16 /tmp/fifo_monitor_1
+1521306985: 
+-------------------------------------------------------
+Esperando que el cliente abra el dispositivo </tmp/fifo_monitor_1> en 20 segundos
+-------------------------------------------------------
+1521306988: 
+------------------------------------------------------------------
+Enviando secreto <1> a través del dispositivo </tmp/fifo_monitor_1>
+------------------------------------------------------------------
+1521306988: 
+*************************************************
+:ok> CONTEXTO del ejercicio 1 preparado.
+*************************************************
+1521306992: 
+
+
+*************************************************
+
+          EJECUTANDO EL EJERCICIO 2.
+
+*************************************************
+
+
+1521306992: COMMAND <ls -al /tmp/fifo_monitor_1 >> .trazas-2/alumno-16096153V 2>&1>
+prw------- 1 iker iker 0 mar 17 18:16 /tmp/fifo_monitor_1
+1521306992: COMMAND <ls -al /tmp/fifo_monitor_2 >> .trazas-2/alumno-16096153V 2>&1>
+ls: no se puede acceder a '/tmp/fifo_monitor_2': No existe el archivo o el directorio
+1521306992: 
+-------------------------------------------------------
+Esperando la creación del dispositivo </tmp/fifo_monitor_2>.
+-------------------------------------------------------
+1521306992: COMMAND <ls -al /tmp/fifo_monitor_2 >> .trazas-2/alumno-16096153V 2>&1>
+ls: no se puede acceder a '/tmp/fifo_monitor_2': No existe el archivo o el directorio
+1521306997: COMMAND <ls -al /tmp/fifo_monitor_2 >> .trazas-2/alumno-16096153V 2>&1>
+prwx------ 1 iker iker 0 mar 17 18:16 /tmp/fifo_monitor_2
+1521306997: 
+-------------------------------------------------------
+ MONITOR: Abriendo el dispositivo </tmp/fifo_monitor_2> para leer.
+-------------------------------------------------------
+1521306997: 
+----------------------------------------------------------------------------------
+ Esperando 20 segundos a leer la respuesta al ejercicio <1> en el dispositivo </tmp/fifo_monitor_2>.
+----------------------------------------------------------------------------------
+1521306997: 
+[5m********************************************
+:OK> RESPUESTA ADECUADA. El secreto <1> es <649>.
+********************************************[0m
+1521307000: 
+-------------------------------------------------------
+Esperando que el cliente abra el dispositivo </tmp/fifo_monitor_1> en 20 segundos
+-------------------------------------------------------
+1521307000: 
+------------------------------------------------------------------
+Enviando secreto <2> a través del dispositivo </tmp/fifo_monitor_1>
+------------------------------------------------------------------
+1521307000: 
+----------------------------------------------------------------------------------
+ Esperando 20 segundos a leer la respuesta al ejercicio <2> en el dispositivo </tmp/fifo_monitor_2>.
+----------------------------------------------------------------------------------
+1521307000: 
+[5m********************************************
+:OK> RESPUESTA ADECUADA. El secreto <2> es <394>.
+********************************************[0m
+1521307000: 
+*************************************************
+:ok> CONTEXTO del ejercicio 2 preparado.
+*************************************************
+1521307003: 
+
+
+*************************************************
+
+          EJECUTANDO EL EJERCICIO 3.
+
+*************************************************
+
+
+1521307003: COMMAND <ipcs -q >> .trazas-2/alumno-16096153V>
+
+------ Colas de mensajes -----
+key        msqid      propietario perms      bytes utilizados mensajes    
+
+1521307003: COMMAND <ipcrm -Q 0x16096153 >> .trazas-2/alumno-16096153V>
+1521307003: 
+-------------------------------------------------------
+CREANDO COLA MENSAJES usando clave de acceso: 0x16096153L
+-------------------------------------------------------
+1521307003: COMMAND <ipcs -q >> .trazas-2/alumno-16096153V>
+
+------ Colas de mensajes -----
+key        msqid      propietario perms      bytes utilizados mensajes    
+0x16096153 0          iker       666        0            0           
+
+1521307003: 
+------------------------------------------------------------------
+Enviando secreto <3> a través de la cola de mensajes con clave 0x16096153L
+------------------------------------------------------------------
+1521307003: 
+*************************************************
+:ok> CONTEXTO del ejercicio 3 preparado.
+*************************************************
+1521307008: 
+
+
+*************************************************
+
+          EJECUTANDO EL EJERCICIO 4.
+
+*************************************************
+
+
+1521307008: 
+-------------------------------------------------------
+Se procede al borrado de la cola de mensajes con clave <0x16096153L>
+ Se espera que el alumno la cree en un tiempo determinado
+-------------------------------------------------------
+1521307008: COMMAND <ipcrm -Q 0x16096153 >> .trazas-2/alumno-16096153V>
+1521307008: COMMAND <ipcs -q >> .trazas-2/alumno-16096153V>
+
+------ Colas de mensajes -----
+key        msqid      propietario perms      bytes utilizados mensajes    
+
+1521307013: 
+-------------------------------------------------------
+:M> Identificada la cola de mensajes con clave <0x16096153L>
+-------------------------------------------------------
+1521307013: 
+----------------------------------------------------------------------------------
+ Esperando 20 segundos a leer la respuesta al ejercicio <3> en la cola <0x16096153L>.
+----------------------------------------------------------------------------------
+1521307013: 
+[5m********************************************
+:OK> RESPUESTA ADECUADA. El secreto <5> es <533>.
+********************************************[0m
+1521307013: 
+[5m********************************************
+:OK> RESPUESTA ADECUADA. El secreto <3> es <31>.
+********************************************[0m
+1521307016: 
+[5m********************************************
+:OK> RESPUESTA ADECUADA. El secreto <4> es <672>.
+********************************************[0m
+1521307019: 
+*************************************************
+:ok> CONTEXTO del ejercicio 4 preparado.
+*************************************************
+1521307023: 
+
+
+*************************************************
+
+          EJECUTANDO EL EJERCICIO 5.
+
+*************************************************
+
+
+1521307023: COMMAND <ps -C client -o stat=,pid= | grep -v [Zz] |awk '{print $2}' > .trazas-2/.n_cliente>
+1521307023: 
+------------------------------------------------------------------
+Enviando secreto <6> a través de la cola de mensajes con clave 0x16096153L
+------------------------------------------------------------------
+1521307023: 
+*************************************************
+:ok> CONTEXTO del ejercicio 5 preparado.
+*************************************************
+1521307029: 
+
+
+*************************************************
+
+          EJECUTANDO EL EJERCICIO 6.
+
+*************************************************
+
+
+1521307029: 
+----------------------------------------------------------------------------------
+ Esperando 20 segundos a leer la respuesta al ejercicio <7> en la cola <0x16096153L>.
+----------------------------------------------------------------------------------
+1521307039: 
+[5m********************************************
+:OK> RESPUESTA ADECUADA. El secreto <7> es <363>.
+********************************************[0m
+1521307042: 
+[5m********************************************
+:OK> RESPUESTA ADECUADA. El secreto <6> es <6>.
+********************************************[0m
+1521307045: 
+*************************************************
+:ok> CONTEXTO del ejercicio 6 preparado.
+*************************************************
+1521307049: 
+
+
+*************************************************
+
+          EJECUTANDO EL EJERCICIO 7.
+
+*************************************************
+
+
+1521307049: COMMAND <ipcs -q | grep ^0x16096153 >> .trazas-2/alumno-16096153V>
+0x16096153 32768      iker       666        190          32          
+1521307049: COMMAND <ls /tmp/fifo_monitor_2 >> .trazas-2/alumno-16096153V>
+/tmp/fifo_monitor_2
+1521307049: COMMAND <ls /tmp/fifo_monitor_1 >> .trazas-2/alumno-16096153V>
+/tmp/fifo_monitor_1
+1521307049: COMMAND <ps -C client -o stat=,pid= | grep -v [Zz] |awk '{print $2}' > .trazas-2/.n_cliente>
+1521307049: 
+-------------------------------------------------------
+Esperando durante 20 segundos recibir en la cola de mensaje (0x16096153L)
+un mensaje de inicio (tipo=6457L) antes de iniciar la limpieza de recursos
+-------------------------------------------------------
+1521307069: 
+-------------------------------------------------------
+RESPUESTA NO RECIBIDA A TIEMPO.
+-------------------------------------------------------
+1521307069: 
+[5m*************************************************
+Problemas en la inicialización del ejercicio 7.
+
+*************************************************[0m
+1521307105: COMMAND <find . -type f -newer .alumno -print | awk -v pwd="`pwd`/.trazas-2" '{ if(index($0,pwd) != 1) print }' > /tmp/.asitmp>
+1521307105: COMMAND <cp ./client.? .trazas-2>
+1521307105: COMMAND <tar zcf save_file-16096153V .trazas-2 > /dev/null>
+1521307105: COMMAND <echo "\nopen u017633.ehu.es\nuser anonymous anonymous\npassive\ncd LAB1718/practica-2\nput save_file-16096153V 16096153V-17-3-18h15\n" | 	  ftp -n 2>&1 > /dev/null>
+1521307120: Iniciando sesión el día 17  del mes 3 a las 18:18.
+1521307120: COMMAND <cp -f /tmp/.monitor ./monitor2>
+1521307120: COMMAND <find . -type f -newer .alumno -print | awk -v pwd="`pwd`/.trazas-2" '{ if(index($0,pwd) != 1) print }' > /tmp/.asitmp>
+1521307120: COMMAND <cp ./client.? .trazas-2>
+1521307120: COMMAND <tar zcf save_file-16096153V .trazas-2 > /dev/null>
+1521307120: COMMAND <echo "\nopen u017633.ehu.es\nuser anonymous anonymous\npassive\ncd LAB1718/practica-2\nput save_file-16096153V 16096153V-17-3-18h18\n" | 	  ftp -n 2>&1 > /dev/null>
+1521307130: 
+********************************************
+           INICIANDO SESION
+********************************************
+1521307130: COMMAND <ifconfig >> .trazas-2/alumno-16096153V>
+enp2s0    Link encap:Ethernet  direcciónHW 3c:4a:92:00:51:94  
+          ACTIVO DIFUSIÓN MULTICAST  MTU:1500  Métrica:1
+          Paquetes RX:0 errores:0 perdidos:0 overruns:0 frame:0
+          Paquetes TX:0 errores:0 perdidos:0 overruns:0 carrier:0
+          colisiones:0 long.colaTX:1000 
+          Bytes RX:0 (0.0 B)  TX bytes:0 (0.0 B)
+
+lo        Link encap:Bucle local  
+          Direc. inet:127.0.0.1  Másc:255.0.0.0
+          Dirección inet6: ::1/128 Alcance:Anfitrión
+          ACTIVO BUCLE FUNCIONANDO  MTU:65536  Métrica:1
+          Paquetes RX:6406 errores:0 perdidos:0 overruns:0 frame:0
+          Paquetes TX:6406 errores:0 perdidos:0 overruns:0 carrier:0
+          colisiones:0 long.colaTX:1 
+          Bytes RX:620170 (620.1 KB)  TX bytes:620170 (620.1 KB)
+
+wlp3s0b1  Link encap:Ethernet  direcciónHW c0:cb:38:4d:99:ab  
+          Direc. inet:192.168.1.40  Difus.:192.168.1.255  Másc:255.255.255.0
+          Dirección inet6: fe80::ddbd:2aba:98ba:1fd7/64 Alcance:Enlace
+          Dirección inet6: fe80::ecb0:27b9:dd13:d4eb/64 Alcance:Enlace
+          Dirección inet6: fe80::5c31:1c82:f87d:b2d3/64 Alcance:Enlace
+          ACTIVO DIFUSIÓN FUNCIONANDO MULTICAST  MTU:1500  Métrica:1
+          Paquetes RX:1117855 errores:0 perdidos:0 overruns:0 frame:0
+          Paquetes TX:796519 errores:0 perdidos:0 overruns:0 carrier:0
+          colisiones:0 long.colaTX:1000 
+          Bytes RX:1551383006 (1.5 GB)  TX bytes:79221944 (79.2 MB)
+
+1521307134: 
+
+
+*************************************************
+
+          EJECUTANDO EL EJERCICIO 1.
+
+*************************************************
+
+
+1521307134: COMMAND <rm -f /tmp/fifo_monitor_1>
+1521307134: COMMAND <ls -al /tmp/fifo_monitor_1 >> .trazas-2/alumno-16096153V 2>&1>
+ls: no se puede acceder a '/tmp/fifo_monitor_1': No existe el archivo o el directorio
+1521307134: 
+-------------------------------------------------------
+CREANDO FIFO </tmp/fifo_monitor_1> PARA ENVIAR MENSAJE
+-------------------------------------------------------
+1521307134: COMMAND <ls -al /tmp/fifo_monitor_1 >> .trazas-2/alumno-16096153V 2>&1>
+prw------- 1 iker iker 0 mar 17 18:18 /tmp/fifo_monitor_1
+1521307134: 
+-------------------------------------------------------
+Esperando que el cliente abra el dispositivo </tmp/fifo_monitor_1> en 20 segundos
+-------------------------------------------------------
+1521307135: 
+------------------------------------------------------------------
+Enviando secreto <1> a través del dispositivo </tmp/fifo_monitor_1>
+------------------------------------------------------------------
+1521307135: 
+*************************************************
+:ok> CONTEXTO del ejercicio 1 preparado.
+*************************************************
+1521307138: 
+
+
+*************************************************
+
+          EJECUTANDO EL EJERCICIO 2.
+
+*************************************************
+
+
+1521307138: COMMAND <ls -al /tmp/fifo_monitor_1 >> .trazas-2/alumno-16096153V 2>&1>
+prw------- 1 iker iker 0 mar 17 18:18 /tmp/fifo_monitor_1
+1521307138: COMMAND <ls -al /tmp/fifo_monitor_2 >> .trazas-2/alumno-16096153V 2>&1>
+prwx------ 1 iker iker 0 mar 17 18:16 /tmp/fifo_monitor_2
+1521307138: 
+-------------------------------------------------------
+Existe el fifo </tmp/fifo_monitor_2>.
+Se procede a su borrado para esperar a su creación
+-------------------------------------------------------
+1521307138: COMMAND <rm -f /tmp/fifo_monitor_2>
+1521307138: 
+-------------------------------------------------------
+Esperando la creación del dispositivo </tmp/fifo_monitor_2>.
+-------------------------------------------------------
+1521307138: COMMAND <ls -al /tmp/fifo_monitor_2 >> .trazas-2/alumno-16096153V 2>&1>
+ls: no se puede acceder a '/tmp/fifo_monitor_2': No existe el archivo o el directorio
+1521307143: COMMAND <ls -al /tmp/fifo_monitor_2 >> .trazas-2/alumno-16096153V 2>&1>
+prwx------ 1 iker iker 0 mar 17 18:18 /tmp/fifo_monitor_2
+1521307143: 
+-------------------------------------------------------
+ MONITOR: Abriendo el dispositivo </tmp/fifo_monitor_2> para leer.
+-------------------------------------------------------
+1521307143: 
+----------------------------------------------------------------------------------
+ Esperando 20 segundos a leer la respuesta al ejercicio <1> en el dispositivo </tmp/fifo_monitor_2>.
+----------------------------------------------------------------------------------
+1521307143: 
+[5m********************************************
+:OK> RESPUESTA ADECUADA. El secreto <1> es <649>.
+********************************************[0m
+1521307146: 
+-------------------------------------------------------
+Esperando que el cliente abra el dispositivo </tmp/fifo_monitor_1> en 20 segundos
+-------------------------------------------------------
+1521307146: 
+------------------------------------------------------------------
+Enviando secreto <2> a través del dispositivo </tmp/fifo_monitor_1>
+------------------------------------------------------------------
+1521307146: 
+----------------------------------------------------------------------------------
+ Esperando 20 segundos a leer la respuesta al ejercicio <2> en el dispositivo </tmp/fifo_monitor_2>.
+----------------------------------------------------------------------------------
+1521307146: 
+[5m********************************************
+:OK> RESPUESTA ADECUADA. El secreto <2> es <394>.
+********************************************[0m
+1521307146: 
+*************************************************
+:ok> CONTEXTO del ejercicio 2 preparado.
+*************************************************
+1521307149: 
+
+
+*************************************************
+
+          EJECUTANDO EL EJERCICIO 3.
+
+*************************************************
+
+
+1521307149: COMMAND <ipcs -q >> .trazas-2/alumno-16096153V>
+
+------ Colas de mensajes -----
+key        msqid      propietario perms      bytes utilizados mensajes    
+0x16096153 32768      iker       666        190          32          
+
+1521307149: COMMAND <ipcrm -Q 0x16096153 >> .trazas-2/alumno-16096153V>
+1521307149: 
+-------------------------------------------------------
+CREANDO COLA MENSAJES usando clave de acceso: 0x16096153L
+-------------------------------------------------------
+1521307149: COMMAND <ipcs -q >> .trazas-2/alumno-16096153V>
+
+------ Colas de mensajes -----
+key        msqid      propietario perms      bytes utilizados mensajes    
+0x16096153 65536      iker       666        0            0           
+
+1521307149: 
+------------------------------------------------------------------
+Enviando secreto <3> a través de la cola de mensajes con clave 0x16096153L
+------------------------------------------------------------------
+1521307149: 
+*************************************************
+:ok> CONTEXTO del ejercicio 3 preparado.
+*************************************************
+1521307153: 
+
+
+*************************************************
+
+          EJECUTANDO EL EJERCICIO 4.
+
+*************************************************
+
+
+1521307153: 
+-------------------------------------------------------
+Se procede al borrado de la cola de mensajes con clave <0x16096153L>
+ Se espera que el alumno la cree en un tiempo determinado
+-------------------------------------------------------
+1521307153: COMMAND <ipcrm -Q 0x16096153 >> .trazas-2/alumno-16096153V>
+1521307153: COMMAND <ipcs -q >> .trazas-2/alumno-16096153V>
+
+------ Colas de mensajes -----
+key        msqid      propietario perms      bytes utilizados mensajes    
+
+1521307158: 
+-------------------------------------------------------
+:M> Identificada la cola de mensajes con clave <0x16096153L>
+-------------------------------------------------------
+1521307158: 
+----------------------------------------------------------------------------------
+ Esperando 20 segundos a leer la respuesta al ejercicio <3> en la cola <0x16096153L>.
+----------------------------------------------------------------------------------
+1521307158: 
+[5m********************************************
+:OK> RESPUESTA ADECUADA. El secreto <5> es <533>.
+********************************************[0m
+1521307158: 
+[5m********************************************
+:OK> RESPUESTA ADECUADA. El secreto <3> es <31>.
+********************************************[0m
+1521307161: 
+[5m********************************************
+:OK> RESPUESTA ADECUADA. El secreto <4> es <672>.
+********************************************[0m
+1521307164: 
+*************************************************
+:ok> CONTEXTO del ejercicio 4 preparado.
+*************************************************
+1521307169: 
+
+
+*************************************************
+
+          EJECUTANDO EL EJERCICIO 5.
+
+*************************************************
+
+
+1521307169: COMMAND <ps -C client -o stat=,pid= | grep -v [Zz] |awk '{print $2}' > .trazas-2/.n_cliente>
+1521307169: 
+------------------------------------------------------------------
+Enviando secreto <6> a través de la cola de mensajes con clave 0x16096153L
+------------------------------------------------------------------
+1521307169: 
+*************************************************
+:ok> CONTEXTO del ejercicio 5 preparado.
+*************************************************
+1521307173: 
+
+
+*************************************************
+
+          EJECUTANDO EL EJERCICIO 6.
+
+*************************************************
+
+
+1521307173: 
+----------------------------------------------------------------------------------
+ Esperando 20 segundos a leer la respuesta al ejercicio <7> en la cola <0x16096153L>.
+----------------------------------------------------------------------------------
+1521307181: 
+[5m********************************************
+:OK> RESPUESTA ADECUADA. El secreto <7> es <363>.
+********************************************[0m
+1521307184: 
+[5m********************************************
+:OK> RESPUESTA ADECUADA. El secreto <6> es <6>.
+********************************************[0m
+1521307187: 
+*************************************************
+:ok> CONTEXTO del ejercicio 6 preparado.
+*************************************************
+1521307193: 
+
+
+*************************************************
+
+          EJECUTANDO EL EJERCICIO 7.
+
+*************************************************
+
+
+1521307193: COMMAND <ipcs -q | grep ^0x16096153 >> .trazas-2/alumno-16096153V>
+0x16096153 98304      iker       666        190          32          
+1521307193: COMMAND <ls /tmp/fifo_monitor_2 >> .trazas-2/alumno-16096153V>
+/tmp/fifo_monitor_2
+1521307193: COMMAND <ls /tmp/fifo_monitor_1 >> .trazas-2/alumno-16096153V>
+/tmp/fifo_monitor_1
+1521307193: COMMAND <ps -C client -o stat=,pid= | grep -v [Zz] |awk '{print $2}' > .trazas-2/.n_cliente>
+1521307193: 
+-------------------------------------------------------
+Esperando durante 20 segundos recibir en la cola de mensaje (0x16096153L)
+un mensaje de inicio (tipo=6550L) antes de iniciar la limpieza de recursos
+-------------------------------------------------------
+1521307201: 
+----------------------------------------------------------------------------------
+ Están disponibles todos los recursos utilizados. Proceder a iniciar el ejercicio.
+----------------------------------------------------------------------------------
+1521307204: COMMAND <ipcs -q | grep ^0x16096153 >> .trazas-2/alumno-16096153V>
+1521307204: COMMAND <ls /tmp/fifo_monitor_2 >> .trazas-2/alumno-16096153V 2>&1>
+/tmp/fifo_monitor_2
+1521307204: 
+[5m*************************************************
+:NOK> Intento fallido para conseguir la clave <8> .
+
+*************************************************[0m
+1521307204: 
+[5m*************************************************
+:nok> No se ha realizado correctamente el ejercicio 7.
+
+*************************************************[0m
+1521307227: COMMAND <find . -type f -newer .alumno -print | awk -v pwd="`pwd`/.trazas-2" '{ if(index($0,pwd) != 1) print }' > /tmp/.asitmp>
+1521307227: COMMAND <cp ./client.? .trazas-2>
+1521307227: COMMAND <tar zcf save_file-16096153V .trazas-2 > /dev/null>
+1521307227: COMMAND <echo "\nopen u017633.ehu.es\nuser anonymous anonymous\npassive\ncd LAB1718/practica-2\nput save_file-16096153V 16096153V-17-3-18h18\n" | 	  ftp -n 2>&1 > /dev/null>
+1521307269: Iniciando sesión el día 17  del mes 3 a las 18:21.
+1521307269: COMMAND <cp -f /tmp/.monitor ./monitor2>
+1521307269: COMMAND <find . -type f -newer .alumno -print | awk -v pwd="`pwd`/.trazas-2" '{ if(index($0,pwd) != 1) print }' > /tmp/.asitmp>
+1521307269: COMMAND <cp ./client.? .trazas-2>
+1521307269: COMMAND <tar zcf save_file-16096153V .trazas-2 > /dev/null>
+1521307269: COMMAND <echo "\nopen u017633.ehu.es\nuser anonymous anonymous\npassive\ncd LAB1718/practica-2\nput save_file-16096153V 16096153V-17-3-18h21\n" | 	  ftp -n 2>&1 > /dev/null>
+1521307279: 
+********************************************
+           INICIANDO SESION
+********************************************
+1521307279: COMMAND <ifconfig >> .trazas-2/alumno-16096153V>
+enp2s0    Link encap:Ethernet  direcciónHW 3c:4a:92:00:51:94  
+          ACTIVO DIFUSIÓN MULTICAST  MTU:1500  Métrica:1
+          Paquetes RX:0 errores:0 perdidos:0 overruns:0 frame:0
+          Paquetes TX:0 errores:0 perdidos:0 overruns:0 carrier:0
+          colisiones:0 long.colaTX:1000 
+          Bytes RX:0 (0.0 B)  TX bytes:0 (0.0 B)
+
+lo        Link encap:Bucle local  
+          Direc. inet:127.0.0.1  Másc:255.0.0.0
+          Dirección inet6: ::1/128 Alcance:Anfitrión
+          ACTIVO BUCLE FUNCIONANDO  MTU:65536  Métrica:1
+          Paquetes RX:6548 errores:0 perdidos:0 overruns:0 frame:0
+          Paquetes TX:6548 errores:0 perdidos:0 overruns:0 carrier:0
+          colisiones:0 long.colaTX:1 
+          Bytes RX:633045 (633.0 KB)  TX bytes:633045 (633.0 KB)
+
+wlp3s0b1  Link encap:Ethernet  direcciónHW c0:cb:38:4d:99:ab  
+          Direc. inet:192.168.1.40  Difus.:192.168.1.255  Másc:255.255.255.0
+          Dirección inet6: fe80::ddbd:2aba:98ba:1fd7/64 Alcance:Enlace
+          Dirección inet6: fe80::ecb0:27b9:dd13:d4eb/64 Alcance:Enlace
+          Dirección inet6: fe80::5c31:1c82:f87d:b2d3/64 Alcance:Enlace
+          ACTIVO DIFUSIÓN FUNCIONANDO MULTICAST  MTU:1500  Métrica:1
+          Paquetes RX:1162381 errores:0 perdidos:0 overruns:0 frame:0
+          Paquetes TX:832811 errores:0 perdidos:0 overruns:0 carrier:0
+          colisiones:0 long.colaTX:1000 
+          Bytes RX:1615520701 (1.6 GB)  TX bytes:82825845 (82.8 MB)
+
+1521307284: 
+
+
+*************************************************
+
+          EJECUTANDO EL EJERCICIO 1.
+
+*************************************************
+
+
+1521307284: COMMAND <rm -f /tmp/fifo_monitor_1>
+1521307284: COMMAND <ls -al /tmp/fifo_monitor_1 >> .trazas-2/alumno-16096153V 2>&1>
+ls: no se puede acceder a '/tmp/fifo_monitor_1': No existe el archivo o el directorio
+1521307284: 
+-------------------------------------------------------
+CREANDO FIFO </tmp/fifo_monitor_1> PARA ENVIAR MENSAJE
+-------------------------------------------------------
+1521307284: COMMAND <ls -al /tmp/fifo_monitor_1 >> .trazas-2/alumno-16096153V 2>&1>
+prw------- 1 iker iker 0 mar 17 18:21 /tmp/fifo_monitor_1
+1521307284: 
+-------------------------------------------------------
+Esperando que el cliente abra el dispositivo </tmp/fifo_monitor_1> en 20 segundos
+-------------------------------------------------------
+1521307285: 
+------------------------------------------------------------------
+Enviando secreto <1> a través del dispositivo </tmp/fifo_monitor_1>
+------------------------------------------------------------------
+1521307285: 
+*************************************************
+:ok> CONTEXTO del ejercicio 1 preparado.
+*************************************************
+1521307288: 
+
+
+*************************************************
+
+          EJECUTANDO EL EJERCICIO 2.
+
+*************************************************
+
+
+1521307288: COMMAND <ls -al /tmp/fifo_monitor_1 >> .trazas-2/alumno-16096153V 2>&1>
+prw------- 1 iker iker 0 mar 17 18:21 /tmp/fifo_monitor_1
+1521307288: COMMAND <ls -al /tmp/fifo_monitor_2 >> .trazas-2/alumno-16096153V 2>&1>
+prwx------ 1 iker iker 0 mar 17 18:19 /tmp/fifo_monitor_2
+1521307288: 
+-------------------------------------------------------
+Existe el fifo </tmp/fifo_monitor_2>.
+Se procede a su borrado para esperar a su creación
+-------------------------------------------------------
+1521307288: COMMAND <rm -f /tmp/fifo_monitor_2>
+1521307288: 
+-------------------------------------------------------
+Esperando la creación del dispositivo </tmp/fifo_monitor_2>.
+-------------------------------------------------------
+1521307288: COMMAND <ls -al /tmp/fifo_monitor_2 >> .trazas-2/alumno-16096153V 2>&1>
+ls: no se puede acceder a '/tmp/fifo_monitor_2': No existe el archivo o el directorio
+1521307293: COMMAND <ls -al /tmp/fifo_monitor_2 >> .trazas-2/alumno-16096153V 2>&1>
+prwx------ 1 iker iker 0 mar 17 18:21 /tmp/fifo_monitor_2
+1521307293: 
+-------------------------------------------------------
+ MONITOR: Abriendo el dispositivo </tmp/fifo_monitor_2> para leer.
+-------------------------------------------------------
+1521307293: 
+----------------------------------------------------------------------------------
+ Esperando 20 segundos a leer la respuesta al ejercicio <1> en el dispositivo </tmp/fifo_monitor_2>.
+----------------------------------------------------------------------------------
+1521307293: 
+[5m********************************************
+:OK> RESPUESTA ADECUADA. El secreto <1> es <649>.
+********************************************[0m
+1521307296: 
+-------------------------------------------------------
+Esperando que el cliente abra el dispositivo </tmp/fifo_monitor_1> en 20 segundos
+-------------------------------------------------------
+1521307296: 
+------------------------------------------------------------------
+Enviando secreto <2> a través del dispositivo </tmp/fifo_monitor_1>
+------------------------------------------------------------------
+1521307296: 
+----------------------------------------------------------------------------------
+ Esperando 20 segundos a leer la respuesta al ejercicio <2> en el dispositivo </tmp/fifo_monitor_2>.
+----------------------------------------------------------------------------------
+1521307296: 
+[5m********************************************
+:OK> RESPUESTA ADECUADA. El secreto <2> es <394>.
+********************************************[0m
+1521307296: 
+*************************************************
+:ok> CONTEXTO del ejercicio 2 preparado.
+*************************************************
+1521307303: 
+
+
+*************************************************
+
+          EJECUTANDO EL EJERCICIO 3.
+
+*************************************************
+
+
+1521307303: COMMAND <ipcs -q >> .trazas-2/alumno-16096153V>
+
+------ Colas de mensajes -----
+key        msqid      propietario perms      bytes utilizados mensajes    
+
+1521307303: COMMAND <ipcrm -Q 0x16096153 >> .trazas-2/alumno-16096153V>
+1521307303: 
+-------------------------------------------------------
+CREANDO COLA MENSAJES usando clave de acceso: 0x16096153L
+-------------------------------------------------------
+1521307303: COMMAND <ipcs -q >> .trazas-2/alumno-16096153V>
+
+------ Colas de mensajes -----
+key        msqid      propietario perms      bytes utilizados mensajes    
+0x16096153 131072     iker       666        0            0           
+
+1521307303: 
+------------------------------------------------------------------
+Enviando secreto <3> a través de la cola de mensajes con clave 0x16096153L
+------------------------------------------------------------------
+1521307303: 
+*************************************************
+:ok> CONTEXTO del ejercicio 3 preparado.
+*************************************************
+1521307307: 
+
+
+*************************************************
+
+          EJECUTANDO EL EJERCICIO 4.
+
+*************************************************
+
+
+1521307307: 
+-------------------------------------------------------
+Se procede al borrado de la cola de mensajes con clave <0x16096153L>
+ Se espera que el alumno la cree en un tiempo determinado
+-------------------------------------------------------
+1521307307: COMMAND <ipcrm -Q 0x16096153 >> .trazas-2/alumno-16096153V>
+1521307307: COMMAND <ipcs -q >> .trazas-2/alumno-16096153V>
+
+------ Colas de mensajes -----
+key        msqid      propietario perms      bytes utilizados mensajes    
+
+1521307312: 
+-------------------------------------------------------
+:M> Identificada la cola de mensajes con clave <0x16096153L>
+-------------------------------------------------------
+1521307312: 
+----------------------------------------------------------------------------------
+ Esperando 20 segundos a leer la respuesta al ejercicio <3> en la cola <0x16096153L>.
+----------------------------------------------------------------------------------
+1521307312: 
+[5m********************************************
+:OK> RESPUESTA ADECUADA. El secreto <5> es <533>.
+********************************************[0m
+1521307312: 
+[5m********************************************
+:OK> RESPUESTA ADECUADA. El secreto <3> es <31>.
+********************************************[0m
+1521307315: 
+[5m********************************************
+:OK> RESPUESTA ADECUADA. El secreto <4> es <672>.
+********************************************[0m
+1521307318: 
+*************************************************
+:ok> CONTEXTO del ejercicio 4 preparado.
+*************************************************
+1521307322: 
+
+
+*************************************************
+
+          EJECUTANDO EL EJERCICIO 5.
+
+*************************************************
+
+
+1521307322: COMMAND <ps -C client -o stat=,pid= | grep -v [Zz] |awk '{print $2}' > .trazas-2/.n_cliente>
+1521307322: 
+------------------------------------------------------------------
+Enviando secreto <6> a través de la cola de mensajes con clave 0x16096153L
+------------------------------------------------------------------
+1521307322: 
+*************************************************
+:ok> CONTEXTO del ejercicio 5 preparado.
+*************************************************
+1521307329: 
+
+
+*************************************************
+
+          EJECUTANDO EL EJERCICIO 6.
+
+*************************************************
+
+
+1521307329: 
+----------------------------------------------------------------------------------
+ Esperando 20 segundos a leer la respuesta al ejercicio <7> en la cola <0x16096153L>.
+----------------------------------------------------------------------------------
+1521307340: 
+[5m********************************************
+:OK> RESPUESTA ADECUADA. El secreto <7> es <363>.
+********************************************[0m
+1521307343: 
+[5m********************************************
+:OK> RESPUESTA ADECUADA. El secreto <6> es <6>.
+********************************************[0m
+1521307346: 
+*************************************************
+:ok> CONTEXTO del ejercicio 6 preparado.
+*************************************************
+1521307353: 
+
+
+*************************************************
+
+          EJECUTANDO EL EJERCICIO 7.
+
+*************************************************
+
+
+1521307353: COMMAND <ipcs -q | grep ^0x16096153 >> .trazas-2/alumno-16096153V>
+0x16096153 163840     iker       666        190          32          
+1521307353: COMMAND <ls /tmp/fifo_monitor_2 >> .trazas-2/alumno-16096153V>
+/tmp/fifo_monitor_2
+1521307353: COMMAND <ls /tmp/fifo_monitor_1 >> .trazas-2/alumno-16096153V>
+/tmp/fifo_monitor_1
+1521307353: COMMAND <ps -C client -o stat=,pid= | grep -v [Zz] |awk '{print $2}' > .trazas-2/.n_cliente>
+1521307353: 
+-------------------------------------------------------
+Esperando durante 20 segundos recibir en la cola de mensaje (0x16096153L)
+un mensaje de inicio (tipo=6683L) antes de iniciar la limpieza de recursos
+-------------------------------------------------------
+1521307364: 
+----------------------------------------------------------------------------------
+ Están disponibles todos los recursos utilizados. Proceder a iniciar el ejercicio.
+----------------------------------------------------------------------------------
+1521307367: COMMAND <ipcs -q | grep ^0x16096153 >> .trazas-2/alumno-16096153V>
+1521307367: COMMAND <ls /tmp/fifo_monitor_2 >> .trazas-2/alumno-16096153V 2>&1>
+/tmp/fifo_monitor_2
+1521616980: Iniciando sesión el día 21  del mes 3 a las 8:23.
+1521616980: COMMAND <cp -f /tmp/.monitor ./monitor2>
+1521616980: COMMAND <find . -type f -newer .alumno -print | awk -v pwd="`pwd`/.trazas-2" '{ if(index($0,pwd) != 1) print }' > /tmp/.asitmp>
+1521616980: COMMAND <cp ./client.? .trazas-2>
+1521616980: COMMAND <tar zcf save_file-16096153V .trazas-2 > /dev/null>
+1521616980: COMMAND <echo "\nopen u017633.ehu.es\nuser anonymous anonymous\npassive\ncd LAB1718/practica-2\nput save_file-16096153V 16096153V-21-3-8h23\n" | 	  ftp -n 2>&1 > /dev/null>
+1521616980: 
+********************************************
+           INICIANDO SESION
+********************************************
+1521616980: COMMAND <ifconfig >> .trazas-2/alumno-16096153V>
+enp2s0    Link encap:Ethernet  direcciónHW 3c:4a:92:00:51:94  
+          ACTIVO DIFUSIÓN MULTICAST  MTU:1500  Métrica:1
+          Paquetes RX:0 errores:0 perdidos:0 overruns:0 frame:0
+          Paquetes TX:0 errores:0 perdidos:0 overruns:0 carrier:0
+          colisiones:0 long.colaTX:1000 
+          Bytes RX:0 (0.0 B)  TX bytes:0 (0.0 B)
+
+lo        Link encap:Bucle local  
+          Direc. inet:127.0.0.1  Másc:255.0.0.0
+          Dirección inet6: ::1/128 Alcance:Anfitrión
+          ACTIVO BUCLE FUNCIONANDO  MTU:65536  Métrica:1
+          Paquetes RX:858 errores:0 perdidos:0 overruns:0 frame:0
+          Paquetes TX:858 errores:0 perdidos:0 overruns:0 carrier:0
+          colisiones:0 long.colaTX:1 
+          Bytes RX:123605 (123.6 KB)  TX bytes:123605 (123.6 KB)
+
+wlp3s0b1  Link encap:Ethernet  direcciónHW c0:cb:38:4d:99:ab  
+          Direc. inet:10.109.42.16  Difus.:10.109.255.255  Másc:255.255.0.0
+          Dirección inet6: fe80::4998:c4e0:b1a0:e9e5/64 Alcance:Enlace
+          ACTIVO DIFUSIÓN FUNCIONANDO MULTICAST  MTU:1500  Métrica:1
+          Paquetes RX:27732 errores:0 perdidos:0 overruns:0 frame:0
+          Paquetes TX:4624 errores:0 perdidos:0 overruns:0 carrier:0
+          colisiones:0 long.colaTX:1000 
+          Bytes RX:6355584 (6.3 MB)  TX bytes:723465 (723.4 KB)
+
+1521616989: 
+
+
+*************************************************
+
+          EJECUTANDO EL EJERCICIO 1.
+
+*************************************************
+
+
+1521616989: COMMAND <rm -f /tmp/fifo_monitor_1>
+1521616989: COMMAND <ls -al /tmp/fifo_monitor_1 >> .trazas-2/alumno-16096153V 2>&1>
+ls: no se puede acceder a '/tmp/fifo_monitor_1': No existe el archivo o el directorio
+1521616989: 
+-------------------------------------------------------
+CREANDO FIFO </tmp/fifo_monitor_1> PARA ENVIAR MENSAJE
+-------------------------------------------------------
+1521616989: COMMAND <ls -al /tmp/fifo_monitor_1 >> .trazas-2/alumno-16096153V 2>&1>
+prw------- 1 iker iker 0 mar 21 08:23 /tmp/fifo_monitor_1
+1521616989: 
+-------------------------------------------------------
+Esperando que el cliente abra el dispositivo </tmp/fifo_monitor_1> en 20 segundos
+-------------------------------------------------------
+1521616990: 
+------------------------------------------------------------------
+Enviando secreto <1> a través del dispositivo </tmp/fifo_monitor_1>
+------------------------------------------------------------------
+1521616990: 
+*************************************************
+:ok> CONTEXTO del ejercicio 1 preparado.
+*************************************************
+1521616994: 
+
+
+*************************************************
+
+          EJECUTANDO EL EJERCICIO 2.
+
+*************************************************
+
+
+1521616994: COMMAND <ls -al /tmp/fifo_monitor_1 >> .trazas-2/alumno-16096153V 2>&1>
+prw------- 1 iker iker 0 mar 21 08:23 /tmp/fifo_monitor_1
+1521616994: COMMAND <ls -al /tmp/fifo_monitor_2 >> .trazas-2/alumno-16096153V 2>&1>
+ls: no se puede acceder a '/tmp/fifo_monitor_2': No existe el archivo o el directorio
+1521616994: 
+-------------------------------------------------------
+Esperando la creación del dispositivo </tmp/fifo_monitor_2>.
+-------------------------------------------------------
+1521616994: COMMAND <ls -al /tmp/fifo_monitor_2 >> .trazas-2/alumno-16096153V 2>&1>
+ls: no se puede acceder a '/tmp/fifo_monitor_2': No existe el archivo o el directorio
+1521616999: COMMAND <ls -al /tmp/fifo_monitor_2 >> .trazas-2/alumno-16096153V 2>&1>
+prwx------ 1 iker iker 0 mar 21 08:23 /tmp/fifo_monitor_2
+1521616999: 
+-------------------------------------------------------
+ MONITOR: Abriendo el dispositivo </tmp/fifo_monitor_2> para leer.
+-------------------------------------------------------
+1521616999: 
+----------------------------------------------------------------------------------
+ Esperando 20 segundos a leer la respuesta al ejercicio <1> en el dispositivo </tmp/fifo_monitor_2>.
+----------------------------------------------------------------------------------
+1521616999: 
+[5m********************************************
+:OK> RESPUESTA ADECUADA. El secreto <1> es <649>.
+********************************************[0m
+1521617002: 
+-------------------------------------------------------
+Esperando que el cliente abra el dispositivo </tmp/fifo_monitor_1> en 20 segundos
+-------------------------------------------------------
+1521617002: 
+------------------------------------------------------------------
+Enviando secreto <2> a través del dispositivo </tmp/fifo_monitor_1>
+------------------------------------------------------------------
+1521617002: 
+----------------------------------------------------------------------------------
+ Esperando 20 segundos a leer la respuesta al ejercicio <2> en el dispositivo </tmp/fifo_monitor_2>.
+----------------------------------------------------------------------------------
+1521617002: 
+[5m********************************************
+:OK> RESPUESTA ADECUADA. El secreto <2> es <394>.
+********************************************[0m
+1521617002: 
+*************************************************
+:ok> CONTEXTO del ejercicio 2 preparado.
+*************************************************
+1521617007: 
+
+
+*************************************************
+
+          EJECUTANDO EL EJERCICIO 3.
+
+*************************************************
+
+
+1521617007: COMMAND <ipcs -q >> .trazas-2/alumno-16096153V>
+
+------ Colas de mensajes -----
+key        msqid      propietario perms      bytes utilizados mensajes    
+
+1521617007: COMMAND <ipcrm -Q 0x16096153 >> .trazas-2/alumno-16096153V>
+1521617007: 
+-------------------------------------------------------
+CREANDO COLA MENSAJES usando clave de acceso: 0x16096153L
+-------------------------------------------------------
+1521617007: COMMAND <ipcs -q >> .trazas-2/alumno-16096153V>
+
+------ Colas de mensajes -----
+key        msqid      propietario perms      bytes utilizados mensajes    
+0x16096153 0          iker       666        0            0           
+
+1521617007: 
+------------------------------------------------------------------
+Enviando secreto <3> a través de la cola de mensajes con clave 0x16096153L
+------------------------------------------------------------------
+1521617007: 
+*************************************************
+:ok> CONTEXTO del ejercicio 3 preparado.
+*************************************************
+1521617012: 
+
+
+*************************************************
+
+          EJECUTANDO EL EJERCICIO 4.
+
+*************************************************
+
+
+1521617012: 
+-------------------------------------------------------
+Se procede al borrado de la cola de mensajes con clave <0x16096153L>
+ Se espera que el alumno la cree en un tiempo determinado
+-------------------------------------------------------
+1521617012: COMMAND <ipcrm -Q 0x16096153 >> .trazas-2/alumno-16096153V>
+1521617012: COMMAND <ipcs -q >> .trazas-2/alumno-16096153V>
+
+------ Colas de mensajes -----
+key        msqid      propietario perms      bytes utilizados mensajes    
+
+1521617017: 
+-------------------------------------------------------
+:M> Identificada la cola de mensajes con clave <0x16096153L>
+-------------------------------------------------------
+1521617017: 
+----------------------------------------------------------------------------------
+ Esperando 20 segundos a leer la respuesta al ejercicio <3> en la cola <0x16096153L>.
+----------------------------------------------------------------------------------
+1521617017: 
+[5m********************************************
+:OK> RESPUESTA ADECUADA. El secreto <5> es <533>.
+********************************************[0m
+1521617017: 
+[5m********************************************
+:OK> RESPUESTA ADECUADA. El secreto <3> es <31>.
+********************************************[0m
+1521617020: 
+[5m********************************************
+:OK> RESPUESTA ADECUADA. El secreto <4> es <672>.
+********************************************[0m
+1521617023: 
+*************************************************
+:ok> CONTEXTO del ejercicio 4 preparado.
+*************************************************
+1521617029: 
+
+
+*************************************************
+
+          EJECUTANDO EL EJERCICIO 5.
+
+*************************************************
+
+
+1521617029: COMMAND <ps -C client -o stat=,pid= | grep -v [Zz] |awk '{print $2}' > .trazas-2/.n_cliente>
+1521617029: 
+------------------------------------------------------------------
+Enviando secreto <6> a través de la cola de mensajes con clave 0x16096153L
+------------------------------------------------------------------
+1521617029: 
+*************************************************
+:ok> CONTEXTO del ejercicio 5 preparado.
+*************************************************
+1521617035: 
+
+
+*************************************************
+
+          EJECUTANDO EL EJERCICIO 6.
+
+*************************************************
+
+
+1521617035: 
+----------------------------------------------------------------------------------
+ Esperando 20 segundos a leer la respuesta al ejercicio <7> en la cola <0x16096153L>.
+----------------------------------------------------------------------------------
+1521617043: 
+[5m********************************************
+:OK> RESPUESTA ADECUADA. El secreto <7> es <363>.
+********************************************[0m
+1521617046: 
+[5m********************************************
+:OK> RESPUESTA ADECUADA. El secreto <6> es <6>.
+********************************************[0m
+1521617049: 
+*************************************************
+:ok> CONTEXTO del ejercicio 6 preparado.
+*************************************************
+1521617055: 
+
+
+*************************************************
+
+          EJECUTANDO EL EJERCICIO 7.
+
+*************************************************
+
+
+1521617055: COMMAND <ipcs -q | grep ^0x16096153 >> .trazas-2/alumno-16096153V>
+0x16096153 32768      iker       666        190          32          
+1521617055: COMMAND <ls /tmp/fifo_monitor_2 >> .trazas-2/alumno-16096153V>
+/tmp/fifo_monitor_2
+1521617055: COMMAND <ls /tmp/fifo_monitor_1 >> .trazas-2/alumno-16096153V>
+/tmp/fifo_monitor_1
+1521617055: COMMAND <ps -C client -o stat=,pid= | grep -v [Zz] |awk '{print $2}' > .trazas-2/.n_cliente>
+1521617055: 
+-------------------------------------------------------
+Esperando durante 20 segundos recibir en la cola de mensaje (0x16096153L)
+un mensaje de inicio (tipo=3557L) antes de iniciar la limpieza de recursos
+-------------------------------------------------------
+1521617060: 
+----------------------------------------------------------------------------------
+ Están disponibles todos los recursos utilizados. Proceder a iniciar el ejercicio.
+----------------------------------------------------------------------------------
+1521617063: COMMAND <ipcs -q | grep ^0x16096153 >> .trazas-2/alumno-16096153V>
+1521617063: COMMAND <ls /tmp/fifo_monitor_2 >> .trazas-2/alumno-16096153V 2>&1>
+/tmp/fifo_monitor_2
+1521617239: Iniciando sesión el día 21  del mes 3 a las 8:27.
+1521617239: COMMAND <cp -f /tmp/.monitor ./monitor2>
+1521617239: COMMAND <find . -type f -newer .alumno -print | awk -v pwd="`pwd`/.trazas-2" '{ if(index($0,pwd) != 1) print }' > /tmp/.asitmp>
+1521617239: COMMAND <cp ./client.? .trazas-2>
+1521617239: COMMAND <tar zcf save_file-16096153V .trazas-2 > /dev/null>
+1521617239: COMMAND <echo "\nopen u017633.ehu.es\nuser anonymous anonymous\npassive\ncd LAB1718/practica-2\nput save_file-16096153V 16096153V-21-3-8h27\n" | 	  ftp -n 2>&1 > /dev/null>
+1521617239: 
+********************************************
+           INICIANDO SESION
+********************************************
+1521617239: COMMAND <ifconfig >> .trazas-2/alumno-16096153V>
+enp2s0    Link encap:Ethernet  direcciónHW 3c:4a:92:00:51:94  
+          ACTIVO DIFUSIÓN MULTICAST  MTU:1500  Métrica:1
+          Paquetes RX:0 errores:0 perdidos:0 overruns:0 frame:0
+          Paquetes TX:0 errores:0 perdidos:0 overruns:0 carrier:0
+          colisiones:0 long.colaTX:1000 
+          Bytes RX:0 (0.0 B)  TX bytes:0 (0.0 B)
+
+lo        Link encap:Bucle local  
+          Direc. inet:127.0.0.1  Másc:255.0.0.0
+          Dirección inet6: ::1/128 Alcance:Anfitrión
+          ACTIVO BUCLE FUNCIONANDO  MTU:65536  Métrica:1
+          Paquetes RX:942 errores:0 perdidos:0 overruns:0 frame:0
+          Paquetes TX:942 errores:0 perdidos:0 overruns:0 carrier:0
+          colisiones:0 long.colaTX:1 
+          Bytes RX:133642 (133.6 KB)  TX bytes:133642 (133.6 KB)
+
+wlp3s0b1  Link encap:Ethernet  direcciónHW c0:cb:38:4d:99:ab  
+          Direc. inet:10.109.42.16  Difus.:10.109.255.255  Másc:255.255.0.0
+          Dirección inet6: fe80::4998:c4e0:b1a0:e9e5/64 Alcance:Enlace
+          ACTIVO DIFUSIÓN FUNCIONANDO MULTICAST  MTU:1500  Métrica:1
+          Paquetes RX:36913 errores:0 perdidos:0 overruns:0 frame:0
+          Paquetes TX:4893 errores:0 perdidos:0 overruns:0 carrier:0
+          colisiones:0 long.colaTX:1000 
+          Bytes RX:7780593 (7.7 MB)  TX bytes:753409 (753.4 KB)
+
+1521617343: 
+
+
+*************************************************
+
+          EJECUTANDO EL EJERCICIO 1.
+
+*************************************************
+
+
+1521617343: COMMAND <rm -f /tmp/fifo_monitor_1>
+1521617343: COMMAND <ls -al /tmp/fifo_monitor_1 >> .trazas-2/alumno-16096153V 2>&1>
+ls: no se puede acceder a '/tmp/fifo_monitor_1': No existe el archivo o el directorio
+1521617343: 
+-------------------------------------------------------
+CREANDO FIFO </tmp/fifo_monitor_1> PARA ENVIAR MENSAJE
+-------------------------------------------------------
+1521617343: COMMAND <ls -al /tmp/fifo_monitor_1 >> .trazas-2/alumno-16096153V 2>&1>
+prw------- 1 iker iker 0 mar 21 08:29 /tmp/fifo_monitor_1
+1521617343: 
+-------------------------------------------------------
+Esperando que el cliente abra el dispositivo </tmp/fifo_monitor_1> en 20 segundos
+-------------------------------------------------------
+1521617343: 
+------------------------------------------------------------------
+Enviando secreto <1> a través del dispositivo </tmp/fifo_monitor_1>
+------------------------------------------------------------------
+1521617343: 
+*************************************************
+:ok> CONTEXTO del ejercicio 1 preparado.
+*************************************************
+1521617346: 
+
+
+*************************************************
+
+          EJECUTANDO EL EJERCICIO 2.
+
+*************************************************
+
+
+1521617346: COMMAND <ls -al /tmp/fifo_monitor_1 >> .trazas-2/alumno-16096153V 2>&1>
+prw------- 1 iker iker 0 mar 21 08:29 /tmp/fifo_monitor_1
+1521617346: COMMAND <ls -al /tmp/fifo_monitor_2 >> .trazas-2/alumno-16096153V 2>&1>
+prwx------ 1 iker iker 0 mar 21 08:23 /tmp/fifo_monitor_2
+1521617346: 
+-------------------------------------------------------
+Existe el fifo </tmp/fifo_monitor_2>.
+Se procede a su borrado para esperar a su creación
+-------------------------------------------------------
+1521617346: COMMAND <rm -f /tmp/fifo_monitor_2>
+1521617346: 
+-------------------------------------------------------
+Esperando la creación del dispositivo </tmp/fifo_monitor_2>.
+-------------------------------------------------------
+1521617346: COMMAND <ls -al /tmp/fifo_monitor_2 >> .trazas-2/alumno-16096153V 2>&1>
+ls: no se puede acceder a '/tmp/fifo_monitor_2': No existe el archivo o el directorio
+1521617351: COMMAND <ls -al /tmp/fifo_monitor_2 >> .trazas-2/alumno-16096153V 2>&1>
+prwx------ 1 iker iker 0 mar 21 08:29 /tmp/fifo_monitor_2
+1521617351: 
+-------------------------------------------------------
+ MONITOR: Abriendo el dispositivo </tmp/fifo_monitor_2> para leer.
+-------------------------------------------------------
+1521617351: 
+----------------------------------------------------------------------------------
+ Esperando 20 segundos a leer la respuesta al ejercicio <1> en el dispositivo </tmp/fifo_monitor_2>.
+----------------------------------------------------------------------------------
+1521617351: 
+[5m********************************************
+:OK> RESPUESTA ADECUADA. El secreto <1> es <649>.
+********************************************[0m
+1521617354: 
+-------------------------------------------------------
+Esperando que el cliente abra el dispositivo </tmp/fifo_monitor_1> en 20 segundos
+-------------------------------------------------------
+1521617354: 
+------------------------------------------------------------------
+Enviando secreto <2> a través del dispositivo </tmp/fifo_monitor_1>
+------------------------------------------------------------------
+1521617354: 
+----------------------------------------------------------------------------------
+ Esperando 20 segundos a leer la respuesta al ejercicio <2> en el dispositivo </tmp/fifo_monitor_2>.
+----------------------------------------------------------------------------------
+1521617354: 
+[5m********************************************
+:OK> RESPUESTA ADECUADA. El secreto <2> es <394>.
+********************************************[0m
+1521617354: 
+*************************************************
+:ok> CONTEXTO del ejercicio 2 preparado.
+*************************************************
+1521617357: 
+
+
+*************************************************
+
+          EJECUTANDO EL EJERCICIO 3.
+
+*************************************************
+
+
+1521617357: COMMAND <ipcs -q >> .trazas-2/alumno-16096153V>
+
+------ Colas de mensajes -----
+key        msqid      propietario perms      bytes utilizados mensajes    
+
+1521617357: COMMAND <ipcrm -Q 0x16096153 >> .trazas-2/alumno-16096153V>
+1521617357: 
+-------------------------------------------------------
+CREANDO COLA MENSAJES usando clave de acceso: 0x16096153L
+-------------------------------------------------------
+1521617357: COMMAND <ipcs -q >> .trazas-2/alumno-16096153V>
+
+------ Colas de mensajes -----
+key        msqid      propietario perms      bytes utilizados mensajes    
+0x16096153 65536      iker       666        0            0           
+
+1521617357: 
+------------------------------------------------------------------
+Enviando secreto <3> a través de la cola de mensajes con clave 0x16096153L
+------------------------------------------------------------------
+1521617357: 
+*************************************************
+:ok> CONTEXTO del ejercicio 3 preparado.
+*************************************************
+1521617360: 
+
+
+*************************************************
+
+          EJECUTANDO EL EJERCICIO 4.
+
+*************************************************
+
+
+1521617360: 
+-------------------------------------------------------
+Se procede al borrado de la cola de mensajes con clave <0x16096153L>
+ Se espera que el alumno la cree en un tiempo determinado
+-------------------------------------------------------
+1521617360: COMMAND <ipcrm -Q 0x16096153 >> .trazas-2/alumno-16096153V>
+1521617360: COMMAND <ipcs -q >> .trazas-2/alumno-16096153V>
+
+------ Colas de mensajes -----
+key        msqid      propietario perms      bytes utilizados mensajes    
+
+1521617365: 
+-------------------------------------------------------
+:M> Identificada la cola de mensajes con clave <0x16096153L>
+-------------------------------------------------------
+1521617365: 
+----------------------------------------------------------------------------------
+ Esperando 20 segundos a leer la respuesta al ejercicio <3> en la cola <0x16096153L>.
+----------------------------------------------------------------------------------
+1521617365: 
+[5m********************************************
+:OK> RESPUESTA ADECUADA. El secreto <5> es <533>.
+********************************************[0m
+1521617365: 
+[5m********************************************
+:OK> RESPUESTA ADECUADA. El secreto <3> es <31>.
+********************************************[0m
+1521617368: 
+[5m********************************************
+:OK> RESPUESTA ADECUADA. El secreto <4> es <672>.
+********************************************[0m
+1521617371: 
+*************************************************
+:ok> CONTEXTO del ejercicio 4 preparado.
+*************************************************
+1521617374: 
+
+
+*************************************************
+
+          EJECUTANDO EL EJERCICIO 5.
+
+*************************************************
+
+
+1521617374: COMMAND <ps -C client -o stat=,pid= | grep -v [Zz] |awk '{print $2}' > .trazas-2/.n_cliente>
+1521617374: 
+------------------------------------------------------------------
+Enviando secreto <6> a través de la cola de mensajes con clave 0x16096153L
+------------------------------------------------------------------
+1521617374: 
+*************************************************
+:ok> CONTEXTO del ejercicio 5 preparado.
+*************************************************
+1521617379: 
+
+
+*************************************************
+
+          EJECUTANDO EL EJERCICIO 6.
+
+*************************************************
+
+
+1521617379: 
+----------------------------------------------------------------------------------
+ Esperando 20 segundos a leer la respuesta al ejercicio <7> en la cola <0x16096153L>.
+----------------------------------------------------------------------------------
+1521617384: 
+[5m********************************************
+:OK> RESPUESTA ADECUADA. El secreto <7> es <363>.
+********************************************[0m
+1521617387: 
+[5m********************************************
+:OK> RESPUESTA ADECUADA. El secreto <6> es <6>.
+********************************************[0m
+1521617390: 
+*************************************************
+:ok> CONTEXTO del ejercicio 6 preparado.
+*************************************************
+1521617395: 
+
+
+*************************************************
+
+          EJECUTANDO EL EJERCICIO 7.
+
+*************************************************
+
+
+1521617395: COMMAND <ipcs -q | grep ^0x16096153 >> .trazas-2/alumno-16096153V>
+0x16096153 98304      iker       666        190          32          
+1521617395: COMMAND <ls /tmp/fifo_monitor_2 >> .trazas-2/alumno-16096153V>
+/tmp/fifo_monitor_2
+1521617395: COMMAND <ls /tmp/fifo_monitor_1 >> .trazas-2/alumno-16096153V>
+/tmp/fifo_monitor_1
+1521617395: COMMAND <ps -C client -o stat=,pid= | grep -v [Zz] |awk '{print $2}' > .trazas-2/.n_cliente>
+1521617395: 
+-------------------------------------------------------
+Esperando durante 20 segundos recibir en la cola de mensaje (0x16096153L)
+un mensaje de inicio (tipo=3650L) antes de iniciar la limpieza de recursos
+-------------------------------------------------------
+1521617400: 
+----------------------------------------------------------------------------------
+ Están disponibles todos los recursos utilizados. Proceder a iniciar el ejercicio.
+----------------------------------------------------------------------------------
+1521617403: COMMAND <ipcs -q | grep ^0x16096153 >> .trazas-2/alumno-16096153V>
+1521617403: COMMAND <ls /tmp/fifo_monitor_2 >> .trazas-2/alumno-16096153V 2>&1>
+/tmp/fifo_monitor_2
+1521617586: Iniciando sesión el día 21  del mes 3 a las 8:33.
+1521617586: COMMAND <cp -f /tmp/.monitor ./monitor2>
+1521617586: COMMAND <find . -type f -newer .alumno -print | awk -v pwd="`pwd`/.trazas-2" '{ if(index($0,pwd) != 1) print }' > /tmp/.asitmp>
+1521617586: COMMAND <cp ./client.? .trazas-2>
+1521617586: COMMAND <tar zcf save_file-16096153V .trazas-2 > /dev/null>
+1521617586: COMMAND <echo "\nopen u017633.ehu.es\nuser anonymous anonymous\npassive\ncd LAB1718/practica-2\nput save_file-16096153V 16096153V-21-3-8h33\n" | 	  ftp -n 2>&1 > /dev/null>
+1521617586: 
+********************************************
+           INICIANDO SESION
+********************************************
+1521617586: COMMAND <ifconfig >> .trazas-2/alumno-16096153V>
+enp2s0    Link encap:Ethernet  direcciónHW 3c:4a:92:00:51:94  
+          ACTIVO DIFUSIÓN MULTICAST  MTU:1500  Métrica:1
+          Paquetes RX:0 errores:0 perdidos:0 overruns:0 frame:0
+          Paquetes TX:0 errores:0 perdidos:0 overruns:0 carrier:0
+          colisiones:0 long.colaTX:1000 
+          Bytes RX:0 (0.0 B)  TX bytes:0 (0.0 B)
+
+lo        Link encap:Bucle local  
+          Direc. inet:127.0.0.1  Másc:255.0.0.0
+          Dirección inet6: ::1/128 Alcance:Anfitrión
+          ACTIVO BUCLE FUNCIONANDO  MTU:65536  Métrica:1
+          Paquetes RX:1066 errores:0 perdidos:0 overruns:0 frame:0
+          Paquetes TX:1066 errores:0 perdidos:0 overruns:0 carrier:0
+          colisiones:0 long.colaTX:1 
+          Bytes RX:148413 (148.4 KB)  TX bytes:148413 (148.4 KB)
+
+wlp3s0b1  Link encap:Ethernet  direcciónHW c0:cb:38:4d:99:ab  
+          Direc. inet:10.109.42.16  Difus.:10.109.255.255  Másc:255.255.0.0
+          Dirección inet6: fe80::4998:c4e0:b1a0:e9e5/64 Alcance:Enlace
+          ACTIVO DIFUSIÓN FUNCIONANDO MULTICAST  MTU:1500  Métrica:1
+          Paquetes RX:49651 errores:0 perdidos:0 overruns:0 frame:0
+          Paquetes TX:5008 errores:0 perdidos:0 overruns:0 carrier:0
+          colisiones:0 long.colaTX:1000 
+          Bytes RX:10000320 (10.0 MB)  TX bytes:770740 (770.7 KB)
+
+1521617589: 
+
+
+*************************************************
+
+          EJECUTANDO EL EJERCICIO 1.
+
+*************************************************
+
+
+1521617589: COMMAND <rm -f /tmp/fifo_monitor_1>
+1521617589: COMMAND <ls -al /tmp/fifo_monitor_1 >> .trazas-2/alumno-16096153V 2>&1>
+ls: no se puede acceder a '/tmp/fifo_monitor_1': No existe el archivo o el directorio
+1521617589: 
+-------------------------------------------------------
+CREANDO FIFO </tmp/fifo_monitor_1> PARA ENVIAR MENSAJE
+-------------------------------------------------------
+1521617589: COMMAND <ls -al /tmp/fifo_monitor_1 >> .trazas-2/alumno-16096153V 2>&1>
+prw------- 1 iker iker 0 mar 21 08:33 /tmp/fifo_monitor_1
+1521617589: 
+-------------------------------------------------------
+Esperando que el cliente abra el dispositivo </tmp/fifo_monitor_1> en 20 segundos
+-------------------------------------------------------
+1521617590: 
+------------------------------------------------------------------
+Enviando secreto <1> a través del dispositivo </tmp/fifo_monitor_1>
+------------------------------------------------------------------
+1521617590: 
+*************************************************
+:ok> CONTEXTO del ejercicio 1 preparado.
+*************************************************
+1521617593: 
+
+
+*************************************************
+
+          EJECUTANDO EL EJERCICIO 2.
+
+*************************************************
+
+
+1521617593: COMMAND <ls -al /tmp/fifo_monitor_1 >> .trazas-2/alumno-16096153V 2>&1>
+prw------- 1 iker iker 0 mar 21 08:33 /tmp/fifo_monitor_1
+1521617593: COMMAND <ls -al /tmp/fifo_monitor_2 >> .trazas-2/alumno-16096153V 2>&1>
+prwx------ 1 iker iker 0 mar 21 08:29 /tmp/fifo_monitor_2
+1521617593: 
+-------------------------------------------------------
+Existe el fifo </tmp/fifo_monitor_2>.
+Se procede a su borrado para esperar a su creación
+-------------------------------------------------------
+1521617593: COMMAND <rm -f /tmp/fifo_monitor_2>
+1521617593: 
+-------------------------------------------------------
+Esperando la creación del dispositivo </tmp/fifo_monitor_2>.
+-------------------------------------------------------
+1521617593: COMMAND <ls -al /tmp/fifo_monitor_2 >> .trazas-2/alumno-16096153V 2>&1>
+ls: no se puede acceder a '/tmp/fifo_monitor_2': No existe el archivo o el directorio
+1521617598: COMMAND <ls -al /tmp/fifo_monitor_2 >> .trazas-2/alumno-16096153V 2>&1>
+prwx------ 1 iker iker 0 mar 21 08:33 /tmp/fifo_monitor_2
+1521617598: 
+-------------------------------------------------------
+ MONITOR: Abriendo el dispositivo </tmp/fifo_monitor_2> para leer.
+-------------------------------------------------------
+1521617598: 
+----------------------------------------------------------------------------------
+ Esperando 20 segundos a leer la respuesta al ejercicio <1> en el dispositivo </tmp/fifo_monitor_2>.
+----------------------------------------------------------------------------------
+1521617598: 
+[5m********************************************
+:OK> RESPUESTA ADECUADA. El secreto <1> es <649>.
+********************************************[0m
+1521617601: 
+-------------------------------------------------------
+Esperando que el cliente abra el dispositivo </tmp/fifo_monitor_1> en 20 segundos
+-------------------------------------------------------
+1521617601: 
+------------------------------------------------------------------
+Enviando secreto <2> a través del dispositivo </tmp/fifo_monitor_1>
+------------------------------------------------------------------
+1521617601: 
+----------------------------------------------------------------------------------
+ Esperando 20 segundos a leer la respuesta al ejercicio <2> en el dispositivo </tmp/fifo_monitor_2>.
+----------------------------------------------------------------------------------
+1521617601: 
+[5m********************************************
+:OK> RESPUESTA ADECUADA. El secreto <2> es <394>.
+********************************************[0m
+1521617601: 
+*************************************************
+:ok> CONTEXTO del ejercicio 2 preparado.
+*************************************************
+1521617604: 
+
+
+*************************************************
+
+          EJECUTANDO EL EJERCICIO 3.
+
+*************************************************
+
+
+1521617604: COMMAND <ipcs -q >> .trazas-2/alumno-16096153V>
+
+------ Colas de mensajes -----
+key        msqid      propietario perms      bytes utilizados mensajes    
+
+1521617604: COMMAND <ipcrm -Q 0x16096153 >> .trazas-2/alumno-16096153V>
+1521617604: 
+-------------------------------------------------------
+CREANDO COLA MENSAJES usando clave de acceso: 0x16096153L
+-------------------------------------------------------
+1521617604: COMMAND <ipcs -q >> .trazas-2/alumno-16096153V>
+
+------ Colas de mensajes -----
+key        msqid      propietario perms      bytes utilizados mensajes    
+0x16096153 131072     iker       666        0            0           
+
+1521617604: 
+------------------------------------------------------------------
+Enviando secreto <3> a través de la cola de mensajes con clave 0x16096153L
+------------------------------------------------------------------
+1521617604: 
+*************************************************
+:ok> CONTEXTO del ejercicio 3 preparado.
+*************************************************
+1521617608: 
+
+
+*************************************************
+
+          EJECUTANDO EL EJERCICIO 4.
+
+*************************************************
+
+
+1521617608: 
+-------------------------------------------------------
+Se procede al borrado de la cola de mensajes con clave <0x16096153L>
+ Se espera que el alumno la cree en un tiempo determinado
+-------------------------------------------------------
+1521617608: COMMAND <ipcrm -Q 0x16096153 >> .trazas-2/alumno-16096153V>
+1521617608: COMMAND <ipcs -q >> .trazas-2/alumno-16096153V>
+
+------ Colas de mensajes -----
+key        msqid      propietario perms      bytes utilizados mensajes    
+
+1521617613: 
+-------------------------------------------------------
+:M> Identificada la cola de mensajes con clave <0x16096153L>
+-------------------------------------------------------
+1521617613: 
+----------------------------------------------------------------------------------
+ Esperando 20 segundos a leer la respuesta al ejercicio <3> en la cola <0x16096153L>.
+----------------------------------------------------------------------------------
+1521617613: 
+[5m********************************************
+:OK> RESPUESTA ADECUADA. El secreto <5> es <533>.
+********************************************[0m
+1521617613: 
+[5m********************************************
+:OK> RESPUESTA ADECUADA. El secreto <3> es <31>.
+********************************************[0m
+1521617616: 
+[5m********************************************
+:OK> RESPUESTA ADECUADA. El secreto <4> es <672>.
+********************************************[0m
+1521617619: 
+*************************************************
+:ok> CONTEXTO del ejercicio 4 preparado.
+*************************************************
+1521617628: 
+
+
+*************************************************
+
+          EJECUTANDO EL EJERCICIO 5.
+
+*************************************************
+
+
+1521617628: COMMAND <ps -C client -o stat=,pid= | grep -v [Zz] |awk '{print $2}' > .trazas-2/.n_cliente>
+1521617628: 
+------------------------------------------------------------------
+Enviando secreto <6> a través de la cola de mensajes con clave 0x16096153L
+------------------------------------------------------------------
+1521617628: 
+*************************************************
+:ok> CONTEXTO del ejercicio 5 preparado.
+*************************************************
+1521617633: 
+
+
+*************************************************
+
+          EJECUTANDO EL EJERCICIO 6.
+
+*************************************************
+
+
+1521617633: 
+----------------------------------------------------------------------------------
+ Esperando 20 segundos a leer la respuesta al ejercicio <7> en la cola <0x16096153L>.
+----------------------------------------------------------------------------------
+1521617640: 
+[5m********************************************
+:OK> RESPUESTA ADECUADA. El secreto <7> es <363>.
+********************************************[0m
+1521617643: 
+[5m********************************************
+:OK> RESPUESTA ADECUADA. El secreto <6> es <6>.
+********************************************[0m
+1521617646: 
+*************************************************
+:ok> CONTEXTO del ejercicio 6 preparado.
+*************************************************
+1521617649: 
+
+
+*************************************************
+
+          EJECUTANDO EL EJERCICIO 7.
+
+*************************************************
+
+
+1521617649: COMMAND <ipcs -q | grep ^0x16096153 >> .trazas-2/alumno-16096153V>
+1521617649: COMMAND <ls /tmp/fifo_monitor_2 >> .trazas-2/alumno-16096153V>
+/tmp/fifo_monitor_2
+1521617649: COMMAND <ls /tmp/fifo_monitor_1 >> .trazas-2/alumno-16096153V>
+/tmp/fifo_monitor_1
+1521617649: COMMAND <ps -C client -o stat=,pid= | grep -v [Zz] |awk '{print $2}' > .trazas-2/.n_cliente>
+1521617649: 
+-------------------------------------------------------
+Esperando durante 20 segundos recibir en la cola de mensaje (0x16096153L)
+un mensaje de inicio (tipo=3772L) antes de iniciar la limpieza de recursos
+-------------------------------------------------------
+1521617653: 
+----------------------------------------------------------------------------------
+ Están disponibles todos los recursos utilizados. Proceder a iniciar el ejercicio.
+----------------------------------------------------------------------------------
+1521617656: COMMAND <ipcs -q | grep ^0x16096153 >> .trazas-2/alumno-16096153V>
+1521617656: COMMAND <ls /tmp/fifo_monitor_2 >> .trazas-2/alumno-16096153V 2>&1>
+/tmp/fifo_monitor_2
+1521617753: Iniciando sesión el día 21  del mes 3 a las 8:35.
+1521617753: COMMAND <cp -f /tmp/.monitor ./monitor2>
+1521617753: COMMAND <find . -type f -newer .alumno -print | awk -v pwd="`pwd`/.trazas-2" '{ if(index($0,pwd) != 1) print }' > /tmp/.asitmp>
+1521617753: COMMAND <cp ./client.? .trazas-2>
+1521617753: COMMAND <tar zcf save_file-16096153V .trazas-2 > /dev/null>
+1521617753: COMMAND <echo "\nopen u017633.ehu.es\nuser anonymous anonymous\npassive\ncd LAB1718/practica-2\nput save_file-16096153V 16096153V-21-3-8h35\n" | 	  ftp -n 2>&1 > /dev/null>
+1521617753: 
+********************************************
+           INICIANDO SESION
+********************************************
+1521617753: COMMAND <ifconfig >> .trazas-2/alumno-16096153V>
+enp2s0    Link encap:Ethernet  direcciónHW 3c:4a:92:00:51:94  
+          ACTIVO DIFUSIÓN MULTICAST  MTU:1500  Métrica:1
+          Paquetes RX:0 errores:0 perdidos:0 overruns:0 frame:0
+          Paquetes TX:0 errores:0 perdidos:0 overruns:0 carrier:0
+          colisiones:0 long.colaTX:1000 
+          Bytes RX:0 (0.0 B)  TX bytes:0 (0.0 B)
+
+lo        Link encap:Bucle local  
+          Direc. inet:127.0.0.1  Másc:255.0.0.0
+          Dirección inet6: ::1/128 Alcance:Anfitrión
+          ACTIVO BUCLE FUNCIONANDO  MTU:65536  Métrica:1
+          Paquetes RX:1116 errores:0 perdidos:0 overruns:0 frame:0
+          Paquetes TX:1116 errores:0 perdidos:0 overruns:0 carrier:0
+          colisiones:0 long.colaTX:1 
+          Bytes RX:155101 (155.1 KB)  TX bytes:155101 (155.1 KB)
+
+wlp3s0b1  Link encap:Ethernet  direcciónHW c0:cb:38:4d:99:ab  
+          Direc. inet:10.109.42.16  Difus.:10.109.255.255  Másc:255.255.0.0
+          Dirección inet6: fe80::4998:c4e0:b1a0:e9e5/64 Alcance:Enlace
+          ACTIVO DIFUSIÓN FUNCIONANDO MULTICAST  MTU:1500  Métrica:1
+          Paquetes RX:56271 errores:0 perdidos:0 overruns:0 frame:0
+          Paquetes TX:5081 errores:0 perdidos:0 overruns:0 carrier:0
+          colisiones:0 long.colaTX:1000 
+          Bytes RX:11161764 (11.1 MB)  TX bytes:784931 (784.9 KB)
+
+1521617755: 
+
+
+*************************************************
+
+          EJECUTANDO EL EJERCICIO 1.
+
+*************************************************
+
+
+1521617755: COMMAND <rm -f /tmp/fifo_monitor_1>
+1521617755: COMMAND <ls -al /tmp/fifo_monitor_1 >> .trazas-2/alumno-16096153V 2>&1>
+ls: no se puede acceder a '/tmp/fifo_monitor_1': No existe el archivo o el directorio
+1521617755: 
+-------------------------------------------------------
+CREANDO FIFO </tmp/fifo_monitor_1> PARA ENVIAR MENSAJE
+-------------------------------------------------------
+1521617755: COMMAND <ls -al /tmp/fifo_monitor_1 >> .trazas-2/alumno-16096153V 2>&1>
+prw------- 1 iker iker 0 mar 21 08:35 /tmp/fifo_monitor_1
+1521617755: 
+-------------------------------------------------------
+Esperando que el cliente abra el dispositivo </tmp/fifo_monitor_1> en 20 segundos
+-------------------------------------------------------
+1521617755: 
+------------------------------------------------------------------
+Enviando secreto <1> a través del dispositivo </tmp/fifo_monitor_1>
+------------------------------------------------------------------
+1521617755: 
+*************************************************
+:ok> CONTEXTO del ejercicio 1 preparado.
+*************************************************
+1521617758: 
+
+
+*************************************************
+
+          EJECUTANDO EL EJERCICIO 2.
+
+*************************************************
+
+
+1521617758: COMMAND <ls -al /tmp/fifo_monitor_1 >> .trazas-2/alumno-16096153V 2>&1>
+prw------- 1 iker iker 0 mar 21 08:35 /tmp/fifo_monitor_1
+1521617758: COMMAND <ls -al /tmp/fifo_monitor_2 >> .trazas-2/alumno-16096153V 2>&1>
+prwx------ 1 iker iker 0 mar 21 08:33 /tmp/fifo_monitor_2
+1521617758: 
+-------------------------------------------------------
+Existe el fifo </tmp/fifo_monitor_2>.
+Se procede a su borrado para esperar a su creación
+-------------------------------------------------------
+1521617758: COMMAND <rm -f /tmp/fifo_monitor_2>
+1521617758: 
+-------------------------------------------------------
+Esperando la creación del dispositivo </tmp/fifo_monitor_2>.
+-------------------------------------------------------
+1521617758: COMMAND <ls -al /tmp/fifo_monitor_2 >> .trazas-2/alumno-16096153V 2>&1>
+ls: no se puede acceder a '/tmp/fifo_monitor_2': No existe el archivo o el directorio
+1521617763: COMMAND <ls -al /tmp/fifo_monitor_2 >> .trazas-2/alumno-16096153V 2>&1>
+prwx------ 1 iker iker 0 mar 21 08:35 /tmp/fifo_monitor_2
+1521617763: 
+-------------------------------------------------------
+ MONITOR: Abriendo el dispositivo </tmp/fifo_monitor_2> para leer.
+-------------------------------------------------------
+1521617763: 
+----------------------------------------------------------------------------------
+ Esperando 20 segundos a leer la respuesta al ejercicio <1> en el dispositivo </tmp/fifo_monitor_2>.
+----------------------------------------------------------------------------------
+1521617763: 
+[5m********************************************
+:OK> RESPUESTA ADECUADA. El secreto <1> es <649>.
+********************************************[0m
+1521617766: 
+-------------------------------------------------------
+Esperando que el cliente abra el dispositivo </tmp/fifo_monitor_1> en 20 segundos
+-------------------------------------------------------
+1521617766: 
+------------------------------------------------------------------
+Enviando secreto <2> a través del dispositivo </tmp/fifo_monitor_1>
+------------------------------------------------------------------
+1521617766: 
+----------------------------------------------------------------------------------
+ Esperando 20 segundos a leer la respuesta al ejercicio <2> en el dispositivo </tmp/fifo_monitor_2>.
+----------------------------------------------------------------------------------
+1521617766: 
+[5m********************************************
+:OK> RESPUESTA ADECUADA. El secreto <2> es <394>.
+********************************************[0m
+1521617766: 
+*************************************************
+:ok> CONTEXTO del ejercicio 2 preparado.
+*************************************************
+1521617769: 
+
+
+*************************************************
+
+          EJECUTANDO EL EJERCICIO 3.
+
+*************************************************
+
+
+1521617769: COMMAND <ipcs -q >> .trazas-2/alumno-16096153V>
+
+------ Colas de mensajes -----
+key        msqid      propietario perms      bytes utilizados mensajes    
+
+1521617769: COMMAND <ipcrm -Q 0x16096153 >> .trazas-2/alumno-16096153V>
+1521617769: 
+-------------------------------------------------------
+CREANDO COLA MENSAJES usando clave de acceso: 0x16096153L
+-------------------------------------------------------
+1521617769: COMMAND <ipcs -q >> .trazas-2/alumno-16096153V>
+
+------ Colas de mensajes -----
+key        msqid      propietario perms      bytes utilizados mensajes    
+0x16096153 229376     iker       666        0            0           
+
+1521617769: 
+------------------------------------------------------------------
+Enviando secreto <3> a través de la cola de mensajes con clave 0x16096153L
+------------------------------------------------------------------
+1521617769: 
+*************************************************
+:ok> CONTEXTO del ejercicio 3 preparado.
+*************************************************
+1521617773: 
+
+
+*************************************************
+
+          EJECUTANDO EL EJERCICIO 4.
+
+*************************************************
+
+
+1521617773: 
+-------------------------------------------------------
+Se procede al borrado de la cola de mensajes con clave <0x16096153L>
+ Se espera que el alumno la cree en un tiempo determinado
+-------------------------------------------------------
+1521617773: COMMAND <ipcrm -Q 0x16096153 >> .trazas-2/alumno-16096153V>
+1521617773: COMMAND <ipcs -q >> .trazas-2/alumno-16096153V>
+
+------ Colas de mensajes -----
+key        msqid      propietario perms      bytes utilizados mensajes    
+
+1521617778: 
+-------------------------------------------------------
+:M> Identificada la cola de mensajes con clave <0x16096153L>
+-------------------------------------------------------
+1521617778: 
+----------------------------------------------------------------------------------
+ Esperando 20 segundos a leer la respuesta al ejercicio <3> en la cola <0x16096153L>.
+----------------------------------------------------------------------------------
+1521617778: 
+[5m********************************************
+:OK> RESPUESTA ADECUADA. El secreto <5> es <533>.
+********************************************[0m
+1521617778: 
+[5m********************************************
+:OK> RESPUESTA ADECUADA. El secreto <3> es <31>.
+********************************************[0m
+1521617781: 
+[5m********************************************
+:OK> RESPUESTA ADECUADA. El secreto <4> es <672>.
+********************************************[0m
+1521617784: 
+*************************************************
+:ok> CONTEXTO del ejercicio 4 preparado.
+*************************************************
+1521617787: 
+
+
+*************************************************
+
+          EJECUTANDO EL EJERCICIO 5.
+
+*************************************************
+
+
+1521617787: COMMAND <ps -C client -o stat=,pid= | grep -v [Zz] |awk '{print $2}' > .trazas-2/.n_cliente>
+1521617787: 
+------------------------------------------------------------------
+Enviando secreto <6> a través de la cola de mensajes con clave 0x16096153L
+------------------------------------------------------------------
+1521617787: 
+*************************************************
+:ok> CONTEXTO del ejercicio 5 preparado.
+*************************************************
+1521617791: 
+
+
+*************************************************
+
+          EJECUTANDO EL EJERCICIO 6.
+
+*************************************************
+
+
+1521617791: 
+----------------------------------------------------------------------------------
+ Esperando 20 segundos a leer la respuesta al ejercicio <7> en la cola <0x16096153L>.
+----------------------------------------------------------------------------------
+1521617797: 
+[5m********************************************
+:OK> RESPUESTA ADECUADA. El secreto <7> es <363>.
+********************************************[0m
+1521617800: 
+[5m********************************************
+:OK> RESPUESTA ADECUADA. El secreto <6> es <6>.
+********************************************[0m
+1521617803: 
+*************************************************
+:ok> CONTEXTO del ejercicio 6 preparado.
+*************************************************
+1521617807: 
+
+
+*************************************************
+
+          EJECUTANDO EL EJERCICIO 7.
+
+*************************************************
+
+
+1521617807: COMMAND <ipcs -q | grep ^0x16096153 >> .trazas-2/alumno-16096153V>
+1521617807: COMMAND <ls /tmp/fifo_monitor_2 >> .trazas-2/alumno-16096153V>
+/tmp/fifo_monitor_2
+1521617807: COMMAND <ls /tmp/fifo_monitor_1 >> .trazas-2/alumno-16096153V>
+/tmp/fifo_monitor_1
+1521617807: COMMAND <ps -C client -o stat=,pid= | grep -v [Zz] |awk '{print $2}' > .trazas-2/.n_cliente>
+1521617807: 
+-------------------------------------------------------
+Esperando durante 20 segundos recibir en la cola de mensaje (0x16096153L)
+un mensaje de inicio (tipo=3873L) antes de iniciar la limpieza de recursos
+-------------------------------------------------------
+1521617813: 
+----------------------------------------------------------------------------------
+ Están disponibles todos los recursos utilizados. Proceder a iniciar el ejercicio.
+----------------------------------------------------------------------------------
+1521617816: COMMAND <ipcs -q | grep ^0x16096153 >> .trazas-2/alumno-16096153V>
+1521617816: COMMAND <ls /tmp/fifo_monitor_2 >> .trazas-2/alumno-16096153V 2>&1>
+/tmp/fifo_monitor_2
+1521618586: Iniciando sesión el día 21  del mes 3 a las 8:49.
+1521618586: COMMAND <cp -f /tmp/.monitor ./monitor2>
+1521618586: COMMAND <find . -type f -newer .alumno -print | awk -v pwd="`pwd`/.trazas-2" '{ if(index($0,pwd) != 1) print }' > /tmp/.asitmp>
+1521618586: COMMAND <cp ./client.? .trazas-2>
+1521618586: COMMAND <tar zcf save_file-16096153V .trazas-2 > /dev/null>
+1521618586: COMMAND <echo "\nopen u017633.ehu.es\nuser anonymous anonymous\npassive\ncd LAB1718/practica-2\nput save_file-16096153V 16096153V-21-3-8h49\n" | 	  ftp -n 2>&1 > /dev/null>
+1521618586: 
+********************************************
+           INICIANDO SESION
+********************************************
+1521618586: COMMAND <ifconfig >> .trazas-2/alumno-16096153V>
+enp2s0    Link encap:Ethernet  direcciónHW 3c:4a:92:00:51:94  
+          ACTIVO DIFUSIÓN MULTICAST  MTU:1500  Métrica:1
+          Paquetes RX:0 errores:0 perdidos:0 overruns:0 frame:0
+          Paquetes TX:0 errores:0 perdidos:0 overruns:0 carrier:0
+          colisiones:0 long.colaTX:1000 
+          Bytes RX:0 (0.0 B)  TX bytes:0 (0.0 B)
+
+lo        Link encap:Bucle local  
+          Direc. inet:127.0.0.1  Másc:255.0.0.0
+          Dirección inet6: ::1/128 Alcance:Anfitrión
+          ACTIVO BUCLE FUNCIONANDO  MTU:65536  Métrica:1
+          Paquetes RX:2404 errores:0 perdidos:0 overruns:0 frame:0
+          Paquetes TX:2404 errores:0 perdidos:0 overruns:0 carrier:0
+          colisiones:0 long.colaTX:1 
+          Bytes RX:380206 (380.2 KB)  TX bytes:380206 (380.2 KB)
+
+wlp3s0b1  Link encap:Ethernet  direcciónHW c0:cb:38:4d:99:ab  
+          Direc. inet:10.109.42.16  Difus.:10.109.255.255  Másc:255.255.0.0
+          Dirección inet6: fe80::4998:c4e0:b1a0:e9e5/64 Alcance:Enlace
+          ACTIVO DIFUSIÓN FUNCIONANDO MULTICAST  MTU:1500  Métrica:1
+          Paquetes RX:108023 errores:0 perdidos:0 overruns:0 frame:0
+          Paquetes TX:18991 errores:0 perdidos:0 overruns:0 carrier:0
+          colisiones:0 long.colaTX:1000 
+          Bytes RX:38171301 (38.1 MB)  TX bytes:2837057 (2.8 MB)
+
+1521618588: 
+
+
+*************************************************
+
+          EJECUTANDO EL EJERCICIO 1.
+
+*************************************************
+
+
+1521618588: COMMAND <rm -f /tmp/fifo_monitor_1>
+1521618588: COMMAND <ls -al /tmp/fifo_monitor_1 >> .trazas-2/alumno-16096153V 2>&1>
+ls: no se puede acceder a '/tmp/fifo_monitor_1': No existe el archivo o el directorio
+1521618588: 
+-------------------------------------------------------
+CREANDO FIFO </tmp/fifo_monitor_1> PARA ENVIAR MENSAJE
+-------------------------------------------------------
+1521618588: COMMAND <ls -al /tmp/fifo_monitor_1 >> .trazas-2/alumno-16096153V 2>&1>
+prw------- 1 iker iker 0 mar 21 08:49 /tmp/fifo_monitor_1
+1521618588: 
+-------------------------------------------------------
+Esperando que el cliente abra el dispositivo </tmp/fifo_monitor_1> en 20 segundos
+-------------------------------------------------------
+1521618589: 
+------------------------------------------------------------------
+Enviando secreto <1> a través del dispositivo </tmp/fifo_monitor_1>
+------------------------------------------------------------------
+1521618589: 
+*************************************************
+:ok> CONTEXTO del ejercicio 1 preparado.
+*************************************************
+1521618592: 
+
+
+*************************************************
+
+          EJECUTANDO EL EJERCICIO 2.
+
+*************************************************
+
+
+1521618592: COMMAND <ls -al /tmp/fifo_monitor_1 >> .trazas-2/alumno-16096153V 2>&1>
+prw------- 1 iker iker 0 mar 21 08:49 /tmp/fifo_monitor_1
+1521618592: COMMAND <ls -al /tmp/fifo_monitor_2 >> .trazas-2/alumno-16096153V 2>&1>
+prwx------ 1 iker iker 0 mar 21 08:36 /tmp/fifo_monitor_2
+1521618592: 
+-------------------------------------------------------
+Existe el fifo </tmp/fifo_monitor_2>.
+Se procede a su borrado para esperar a su creación
+-------------------------------------------------------
+1521618592: COMMAND <rm -f /tmp/fifo_monitor_2>
+1521618592: 
+-------------------------------------------------------
+Esperando la creación del dispositivo </tmp/fifo_monitor_2>.
+-------------------------------------------------------
+1521618592: COMMAND <ls -al /tmp/fifo_monitor_2 >> .trazas-2/alumno-16096153V 2>&1>
+ls: no se puede acceder a '/tmp/fifo_monitor_2': No existe el archivo o el directorio
+1521618597: COMMAND <ls -al /tmp/fifo_monitor_2 >> .trazas-2/alumno-16096153V 2>&1>
+prwx------ 1 iker iker 0 mar 21 08:49 /tmp/fifo_monitor_2
+1521618597: 
+-------------------------------------------------------
+ MONITOR: Abriendo el dispositivo </tmp/fifo_monitor_2> para leer.
+-------------------------------------------------------
+1521618597: 
+----------------------------------------------------------------------------------
+ Esperando 20 segundos a leer la respuesta al ejercicio <1> en el dispositivo </tmp/fifo_monitor_2>.
+----------------------------------------------------------------------------------
+1521618597: 
+[5m********************************************
+:OK> RESPUESTA ADECUADA. El secreto <1> es <649>.
+********************************************[0m
+1521618600: 
+-------------------------------------------------------
+Esperando que el cliente abra el dispositivo </tmp/fifo_monitor_1> en 20 segundos
+-------------------------------------------------------
+1521618600: 
+------------------------------------------------------------------
+Enviando secreto <2> a través del dispositivo </tmp/fifo_monitor_1>
+------------------------------------------------------------------
+1521618600: 
+----------------------------------------------------------------------------------
+ Esperando 20 segundos a leer la respuesta al ejercicio <2> en el dispositivo </tmp/fifo_monitor_2>.
+----------------------------------------------------------------------------------
+1521618600: 
+[5m********************************************
+:OK> RESPUESTA ADECUADA. El secreto <2> es <394>.
+********************************************[0m
+1521618600: 
+*************************************************
+:ok> CONTEXTO del ejercicio 2 preparado.
+*************************************************
+1521618604: 
+
+
+*************************************************
+
+          EJECUTANDO EL EJERCICIO 3.
+
+*************************************************
+
+
+1521618604: COMMAND <ipcs -q >> .trazas-2/alumno-16096153V>
+
+------ Colas de mensajes -----
+key        msqid      propietario perms      bytes utilizados mensajes    
+
+1521618604: COMMAND <ipcrm -Q 0x16096153 >> .trazas-2/alumno-16096153V>
+1521618604: 
+-------------------------------------------------------
+CREANDO COLA MENSAJES usando clave de acceso: 0x16096153L
+-------------------------------------------------------
+1521618604: COMMAND <ipcs -q >> .trazas-2/alumno-16096153V>
+
+------ Colas de mensajes -----
+key        msqid      propietario perms      bytes utilizados mensajes    
+0x16096153 327680     iker       666        0            0           
+
+1521618604: 
+------------------------------------------------------------------
+Enviando secreto <3> a través de la cola de mensajes con clave 0x16096153L
+------------------------------------------------------------------
+1521618604: 
+*************************************************
+:ok> CONTEXTO del ejercicio 3 preparado.
+*************************************************
+1521618607: 
+
+
+*************************************************
+
+          EJECUTANDO EL EJERCICIO 4.
+
+*************************************************
+
+
+1521618607: 
+-------------------------------------------------------
+Se procede al borrado de la cola de mensajes con clave <0x16096153L>
+ Se espera que el alumno la cree en un tiempo determinado
+-------------------------------------------------------
+1521618607: COMMAND <ipcrm -Q 0x16096153 >> .trazas-2/alumno-16096153V>
+1521618607: COMMAND <ipcs -q >> .trazas-2/alumno-16096153V>
+
+------ Colas de mensajes -----
+key        msqid      propietario perms      bytes utilizados mensajes    
+
+1521618612: 
+-------------------------------------------------------
+:M> Identificada la cola de mensajes con clave <0x16096153L>
+-------------------------------------------------------
+1521618612: 
+----------------------------------------------------------------------------------
+ Esperando 20 segundos a leer la respuesta al ejercicio <3> en la cola <0x16096153L>.
+----------------------------------------------------------------------------------
+1521618612: 
+[5m********************************************
+:OK> RESPUESTA ADECUADA. El secreto <5> es <533>.
+********************************************[0m
+1521618612: 
+[5m********************************************
+:OK> RESPUESTA ADECUADA. El secreto <3> es <31>.
+********************************************[0m
+1521618615: 
+[5m********************************************
+:OK> RESPUESTA ADECUADA. El secreto <4> es <672>.
+********************************************[0m
+1521618618: 
+*************************************************
+:ok> CONTEXTO del ejercicio 4 preparado.
+*************************************************
+1521618624: 
+
+
+*************************************************
+
+          EJECUTANDO EL EJERCICIO 5.
+
+*************************************************
+
+
+1521618624: COMMAND <ps -C client -o stat=,pid= | grep -v [Zz] |awk '{print $2}' > .trazas-2/.n_cliente>
+1521618624: 
+------------------------------------------------------------------
+Enviando secreto <6> a través de la cola de mensajes con clave 0x16096153L
+------------------------------------------------------------------
+1521618624: 
+*************************************************
+:ok> CONTEXTO del ejercicio 5 preparado.
+*************************************************
+1521618630: 
+
+
+*************************************************
+
+          EJECUTANDO EL EJERCICIO 6.
+
+*************************************************
+
+
+1521618630: 
+----------------------------------------------------------------------------------
+ Esperando 20 segundos a leer la respuesta al ejercicio <7> en la cola <0x16096153L>.
+----------------------------------------------------------------------------------
+1521618636: 
+[5m********************************************
+:OK> RESPUESTA ADECUADA. El secreto <7> es <363>.
+********************************************[0m
+1521618639: 
+[5m********************************************
+:OK> RESPUESTA ADECUADA. El secreto <6> es <6>.
+********************************************[0m
+1521618642: 
+*************************************************
+:ok> CONTEXTO del ejercicio 6 preparado.
+*************************************************
+1521618646: 
+
+
+*************************************************
+
+          EJECUTANDO EL EJERCICIO 7.
+
+*************************************************
+
+
+1521618646: COMMAND <ipcs -q | grep ^0x16096153 >> .trazas-2/alumno-16096153V>
+1521618646: COMMAND <ls /tmp/fifo_monitor_2 >> .trazas-2/alumno-16096153V>
+/tmp/fifo_monitor_2
+1521618646: COMMAND <ls /tmp/fifo_monitor_1 >> .trazas-2/alumno-16096153V>
+/tmp/fifo_monitor_1
+1521618646: COMMAND <ps -C client -o stat=,pid= | grep -v [Zz] |awk '{print $2}' > .trazas-2/.n_cliente>
+1521618646: 
+-------------------------------------------------------
+Esperando durante 20 segundos recibir en la cola de mensaje (0x16096153L)
+un mensaje de inicio (tipo=4562L) antes de iniciar la limpieza de recursos
+-------------------------------------------------------
+1521618651: 
+----------------------------------------------------------------------------------
+ Están disponibles todos los recursos utilizados. Proceder a iniciar el ejercicio.
+----------------------------------------------------------------------------------
+1521618654: COMMAND <ipcs -q | grep ^0x16096153 >> .trazas-2/alumno-16096153V>
+1521618654: COMMAND <ls /tmp/fifo_monitor_2 >> .trazas-2/alumno-16096153V 2>&1>
+/tmp/fifo_monitor_2

@@ -38,6 +38,7 @@ void ej3();
 void ej4();
 void ej5();
 void ej6();
+void ej7();
 
 void limpio()
 {
@@ -191,6 +192,33 @@ void ej6()
 	iden=msgget(0x16096153L,0666);
 	msgsnd(iden,(msgbuf *)&buff,sizeof(buff)-sizeof(long),0);
 
+	msgctl(iden,IPC_RMID,(struct msqid_ds *)NULL);
+
+}
+
+void ej7()
+{
+	int iden;
+	msgbuf buff;
+	char temp[]="Iker";
+	char pru[6];
+
+	iden=msgget(0x16096153L,0666|IPC_CREAT);
+
+	printf("Introduce el pide del monitor: ");
+	limpio();
+	fgets(pru,6,stdin);
+	sscanf(pru,"%ld",&buff.tipo);
+
+	strcpy(buff.texto,temp);
+	printf("El pid del monitor es: %ld\n",buff.tipo);
+	printf("El texto enviado es: %s\n",buff.texto);
+
+	msgsnd(iden,(msgbuf*)&buff,sizeof(buff)-sizeof(long),0);
+
+	sleep(2);
+	msgctl(iden,IPC_RMID,(struct msqid_ds *)NULL);
+
 }
 
 int main(int argc, char*argv[])
@@ -212,6 +240,9 @@ int main(int argc, char*argv[])
 	intro();
 
 	ej6();
+	intro();
+
+	ej7();
 	intro();
 
 	return 0;
