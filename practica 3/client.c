@@ -4,6 +4,8 @@
 #include <sys/ipc.h>
 #include <sys/shm.h>
 #include <unistd.h>
+#include <sys/types.h>
+#include <sys/sem.h>
 
 
 #define clave 0x16096153L
@@ -32,6 +34,8 @@ int main(int argc,char*argv[])
 	//Ejercicio 1 y 2
 	int id,secre1,offset;
 	char*dir,sec2[256];
+	//Ejercicio 3
+	int idsem1;
 
 	id=shmget(clave,1024,0666);
 	dir=shmat(id,0,0);//Vinculacion
@@ -48,7 +52,17 @@ int main(int argc,char*argv[])
 	id=shmget(clave,1024,IPC_CREAT|0666);
 	dir=shmat(id,0,0);
 
-	sprintf();
+	sprintf(dir,"%s",sec2);
+	sscanf(sec2,"<%03d>",&offset);
+	sprintf(dir+offset+16,"<%03d>",secre1);
+	sleep(3);
+	shmdt(dir);
+	intro();
+
+	//Ejercicio 3
+	idsem1=semget(clave,1,IPC_CREAT|0666);//creamos semaforo
+	semctl(idsem1,1,SETVAL,153);//Inicializar con 153
+	intro();
 
 	return 0;
 }
