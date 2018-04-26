@@ -6,7 +6,8 @@
 #include <unistd.h>
 #include <sys/types.h>
 #include <sys/sem.h>
-
+#include <string.h>
+#include <ctype.h>
 
 #define clave 0x16096153L
 
@@ -30,33 +31,37 @@ void intro()
 
 int main(int argc,char*argv[])
 {
-	int id,idsem,numcli=0;
+	int id,idsem,numcli=0,i=0;
 	char*dir;
-	char msg[]="Hola soy el servidor";
-	char nuevo[256];
+	char msg[21]="Hola soy el servidor";
+	char nuevo[255];
 	struct sembuf sum[2]={{0,1,0},{1,1,0}},res[2]={{0,-1,0},{1,-1,0}};
 
 
 	id=shmget(clave,1024,IPC_CREAT|0666);
+	dir=shmat(id,0,0);
 	idsem=semget(clave,2,IPC_CREAT|0666);
 	semctl(idsem,0,SETVAL,1);
-	semctl(idsem,1,SETVAL,1);
+	semctl(idsem,1,SETVAL,0);
 
-	semop(idsem,&res[0],1);
-	dir=shmat(id,0,0);
-	sprintf(dir,"%s",msg);
-	*((int*)(dir+sizeof(msg)))=numcli;
-	semop(idsem,&sum[0],1);
+	do
+	{
+		numcli=semctl(idsem,1,GETVAL);
+	}while(numcli==0);
 
-	sleep(5);
+	while(numcli!=0)
+	{
+		semop(idsem,&res[0],1);
+		sprintf(nuevo,"%s",dir);
 
-	semop(idsem,&res[0],1);
-	sscanf(dir,"%s",nuevo);
-	numcli=*((int*)(dir+sizeof(nuevo)));
-	semop(idsem,&sum[0],1);
-
-	printf("El mensaje del cliente %d es: %s\n",numcli,nuevo);
-
+		for(i=0;i<strlen(nuevo);i++)
+		{
+			nuevo[i]=toupper(nuevo[i]);
+		}
+		sprintf(dir,"%s",nuevo);
+		semop(idsem,&sum[0],1);
+		numcli=semctl(idsem,1,GETVAL);
+	}
 	intro();
 	shmdt(dir);
 	shmctl(id,IPC_RMID,NULL);
